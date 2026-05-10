@@ -344,7 +344,7 @@ add_action('init', 'trace_register_card_block_style');
  */
 function trace_register_radius_block_styles()
 {
-	$blocks = array( 'core/group', 'core/image', 'core/cover' );
+	$blocks = array( 'core/group', 'core/image', 'core/cover', 'core/media-text' );
 
 	$styles = array(
 		array( 'name' => 'radius-none', 'label' => __( 'Sharp',   'trace' ) ),

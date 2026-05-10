@@ -251,37 +251,43 @@ a:has(picture)::after {
 
 .is-style-radius-none,
 .is-style-radius-none img,
-.is-style-radius-none .wp-block-cover__image-background {
+.is-style-radius-none .wp-block-cover__image-background,
+.is-style-radius-none .wp-block-media-text__media img {
 	border-radius: var(--wp--custom--radius--none) !important;
 }
 
 .is-style-radius-s,
 .is-style-radius-s img,
-.is-style-radius-s .wp-block-cover__image-background {
+.is-style-radius-s .wp-block-cover__image-background,
+.is-style-radius-s .wp-block-media-text__media img {
 	border-radius: var(--wp--custom--radius--s);
 }
 
 .is-style-radius-m,
 .is-style-radius-m img,
-.is-style-radius-m .wp-block-cover__image-background {
+.is-style-radius-m .wp-block-cover__image-background,
+.is-style-radius-m .wp-block-media-text__media img {
 	border-radius: var(--wp--custom--radius--m);
 }
 
 .is-style-radius-l,
 .is-style-radius-l img,
-.is-style-radius-l .wp-block-cover__image-background {
+.is-style-radius-l .wp-block-cover__image-background,
+.is-style-radius-l .wp-block-media-text__media img {
 	border-radius: var(--wp--custom--radius--l);
 }
 
 .is-style-radius-xl,
 .is-style-radius-xl img,
-.is-style-radius-xl .wp-block-cover__image-background {
+.is-style-radius-xl .wp-block-cover__image-background,
+.is-style-radius-xl .wp-block-media-text__media img {
 	border-radius: var(--wp--custom--radius--xl);
 }
 
 .is-style-radius-full,
 .is-style-radius-full img,
-.is-style-radius-full .wp-block-cover__image-background {
+.is-style-radius-full .wp-block-cover__image-background,
+.is-style-radius-full .wp-block-media-text__media img {
 	border-radius: var(--wp--custom--radius--full);
 	overflow: hidden;
 }
