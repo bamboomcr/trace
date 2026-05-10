@@ -337,6 +337,33 @@ function trace_register_card_block_style()
 add_action('init', 'trace_register_card_block_style');
 
 /**
+ * Predefined radius styles for Group, Image, and Cover blocks.
+ * Tokens are defined in theme.json → settings.custom.radius.
+ *
+ * @return void
+ */
+function trace_register_radius_block_styles()
+{
+	$blocks = array( 'core/group', 'core/image', 'core/cover' );
+
+	$styles = array(
+		array( 'name' => 'radius-none', 'label' => __( 'Sharp',   'trace' ) ),
+		array( 'name' => 'radius-s',    'label' => __( 'Soft',     'trace' ) ),
+		array( 'name' => 'radius-m',    'label' => __( 'Rounded',  'trace' ) ),
+		array( 'name' => 'radius-l',    'label' => __( 'Large',    'trace' ) ),
+		array( 'name' => 'radius-xl',   'label' => __( 'X-Large',  'trace' ) ),
+		array( 'name' => 'radius-full', 'label' => __( 'Pill',     'trace' ) ),
+	);
+
+	foreach ( $blocks as $block ) {
+		foreach ( $styles as $style ) {
+			register_block_style( $block, $style );
+		}
+	}
+}
+add_action( 'init', 'trace_register_radius_block_styles' );
+
+/**
  * Theme team member block style.
  *
  * @return void
