@@ -1,0 +1,45 @@
+<!-- wp:template-part {"slug":"header-smart"} /-->
+ 
+<!-- wp:group {"tagName":"main","align":"full","className":"template-home","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull template-home"><!-- wp:group {"className":"home-inner","layout":{"type":"constrained"}} -->
+<div class="wp-block-group home-inner"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading"></h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"l"} -->
+<p class="has-l-font-size"></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"home-inner","layout":{"type":"constrained"}} -->
+<div class="wp-block-group home-inner"><!-- wp:group -->
+<div class="wp-block-group"><!-- wp:heading -->
+<h2 class="wp-block-heading">Latest updates</h2>
+<!-- /wp:heading -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">View all posts</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":1,"query":{"inherit":true,"perPage":10},"layout":{"type":"constrained"}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:post-title {"isLink":true} /-->
+
+<!-- wp:post-excerpt /-->
+
+<!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->

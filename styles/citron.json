@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "title": "Citron",
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "Background",
+                    "slug": "background",
+                    "color": "#D4E055"
+                },
+                {
+                    "name": "Surface",
+                    "slug": "surface",
+                    "color": "#C5D147"
+                },
+                {
+                    "name": "Border",
+                    "slug": "border",
+                    "color": "#8FA130"
+                },
+                {
+                    "name": "Muted",
+                    "slug": "muted",
+                    "color": "#4A5A1F"
+                },
+                {
+                    "name": "Foreground",
+                    "slug": "foreground",
+                    "color": "#1A1F0A"
+                },
+                {
+                    "name": "Text",
+                    "slug": "text",
+                    "color": "#1A1F0A"
+                },
+                {
+                    "name": "Heading",
+                    "slug": "heading",
+                    "color": "#2D5973"
+                },
+                {
+                    "name": "Background Inverse",
+                    "slug": "background-inverse",
+                    "color": "#1A1F0A"
+                },
+                {
+                    "name": "Action",
+                    "slug": "action",
+                    "color": "#FF1B6B"
+                },
+                {
+                    "name": "Accent 2",
+                    "slug": "accent-2",
+                    "color": "#FF6B1F"
+                },
+                {
+                    "name": "Danger",
+                    "slug": "danger",
+                    "color": "#B8001F"
+                },
+                {
+                    "name": "Highlight",
+                    "slug": "highlight",
+                    "color": "#FFE85C"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.swp
+
+# Claude Code local config
+.claude/settings.local.json
+
+# Local environment
+.env
+.env.local
+
+# Build output
+dist/
+build/

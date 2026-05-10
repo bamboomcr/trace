@@ -1,0 +1,1341 @@
+/*  ==========================================================================
+	TRACE: front.css
+	Front-end runtime behaviour + header/nav behaviour
+	(Anything you want visible in the editor should live in blocks.css)
+	========================================================================== */
+
+
+/*  ==========================================================================
+	Simple Page Transitions
+	========================================================================== */
+    /* Fade in on load */
+    html {
+        opacity: 1;
+        transition: opacity 220ms ease;
+    }
+
+    /* JS adds this before navigating away */
+    html.is-navigating {
+        opacity: 0;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            transition: none;
+        }
+    }
+
+    html {
+        /**  Trace Smooth Scrolling
+        **/
+        scroll-behavior: smooth;
+    }
+
+
+
+
+
+/* ==========================================================================
+	Alignments
+	======================================================================= */
+
+    /*
+    * IMPORTANT:
+    * Do not force .alignfull to width:100% globally.
+    * WordPress core handles full-width correctly (including root-padding-aware alignments).
+    */
+
+    /* Wide alignment */
+    .alignwide {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--wp--style--global--wide-size);
+    }
+
+    /*
+    * If an alignfull block is placed INSIDE a column (or another constrained container),
+    * prevent it from trying to “break out” and causing horizontal scroll.
+    */
+    .wp-block-column .alignfull,
+    .wp-block-column .wp-block-cover.alignfull {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+
+
+/*  ===========================================================================
+    Site title: no wrap + ellipsis + subtle fade
+	========================================================================= */
+
+    .site-header {
+        transition: background 900ms ease, transform 900ms ease;
+        will-change: background, transform;
+    }
+
+    body.trace-scroll-up:not(.trace-top-page) .site-header {
+        background: var(--wp--preset--color--background);
+        transition: background 900ms ease;
+    }
+
+    body.trace-scroll-down .site-header {
+        transform: translateY(-100%);
+        transition: transform 900ms ease;
+    }
+
+    .site-header .wp-block-site-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+
+/*  =========================================================================
+	TRACE: Header Navigation (Desktop + Dropdown)
+	Scope everything to .site-header to avoid affecting in-content navs.
+	======================================================================= */
+
+    /* Desktop base */
+    .site-header .wp-block-navigation {
+        width: 100%;
+    }
+
+    .site-header .wp-block-navigation__container {
+        align-items: center;
+    }
+
+    /* Top-level link styling */
+    .site-header .wp-block-navigation-item__content {
+        text-decoration: none;
+        position: relative;
+        color: var(--wp--preset--color--foreground);
+    }
+
+    .site-header .wp-block-navigation-item__content:hover,
+    .site-header .wp-block-navigation-item__content:focus-visible {
+        color: var(--wp--preset--color--action);
+    }
+
+    /* Prevent your editorial underline system affecting header nav links */
+    .site-header .wp-block-navigation a::after {
+        content: none;
+    }
+
+    /* Focus ring (single source of truth) */
+    .site-header .wp-block-navigation-item__content:focus-visible {
+        outline: 2px solid var(--wp--preset--color--action);
+        outline-offset: 3px;
+        border-radius: 0.5rem;
+        text-decoration: none;
+    }
+
+    /* Current item clarity */
+    .site-header .current-menu-item > .wp-block-navigation-item__content,
+    .site-header .current-menu-ancestor > .wp-block-navigation-item__content {
+        /* color: var(--wp--preset--color--foreground); */
+        color: inherit;
+    }
+
+    .site-header .wp-block-navigation__submenu-container:not(.has-text-color):not([style*="color"]) {
+        color: var(--wp--preset--color--foreground);
+    }
+
+    /* Submenu indicator tweak */
+    .site-header
+        .wp-block-navigation-item__label
+        + .wp-block-navigation__submenu-icon {
+        transform: translateY(1px);
+    }
+
+/*  ==========================================================================
+	Dropdown mechanics (hover + keyboard)
+	======================================================================== */
+
+    /* Hover bridge + keyboard open support */
+    .site-header .wp-block-navigation-item.has-child {
+        position: relative;
+    }
+
+    /* Invisible bridge to prevent hover-gap collapse */
+    .site-header .wp-block-navigation-item.has-child::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -0.75rem;
+        height: 0.75rem;
+    }
+
+    /* Default: submenu hidden (we control open state) */
+    .site-header .wp-block-navigation__submenu-container {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(0.25rem);
+        transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+        margin-top: 0.5rem; /* visual breathing room */
+    }
+
+    .wp-block-navigation:not(.has-background)
+        .wp-block-navigation__submenu-container {
+        background-color: var(--wp--preset--color--surface);
+    }
+
+    /* Open on hover */
+    .site-header
+        .wp-block-navigation-item.has-child:hover
+        > .wp-block-navigation__submenu-container {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* Open while tabbing (keyboard) */
+    /* Removed as bug was keeping visdible */
+    /* .site-header
+        .wp-block-navigation-item.has-child:focus-within
+        > .wp-block-navigation__submenu-container {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        background-color: transparent !important;
+    } */
+
+    /* Improve click target on parent items */
+    .site-header
+        .wp-block-navigation-item.has-child
+        > .wp-block-navigation-item__content {
+        padding-right: 0.25rem;
+    }
+
+/*  ==========================================================================
+	Dropdown appearance (single source of truth)
+	======================================================================== */
+
+    /* Neutralise WP’s “has-background” inline/default styling */
+    .site-header .wp-block-navigation__submenu-container:not(.has-background):not([style*="background"]) {
+        background-color: var(--wp--preset--color--surface);
+    }
+
+    /* Dropdown panel styling */
+    .site-header .wp-block-navigation__submenu-container {
+        background-color: var(--wp--preset--color--surface);
+        border: 1px solid var(--wp--preset--color--border);
+        border-radius: 0.75rem;
+        padding: 0.5rem;
+        min-width: 14rem;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Dropdown items */
+    .site-header
+        .wp-block-navigation__submenu-container
+        .wp-block-navigation-item__content {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        color: var(--wp--preset--color--foreground);
+    }
+
+    /* Base state */
+    .site-header
+        .wp-block-navigation__submenu-container
+        .wp-block-navigation-item__content {
+        transition: background-color 360ms ease, color 3ms ease, opacity 360ms ease;
+    }
+
+    /* Hover / focus */
+    .site-header
+        .wp-block-navigation__submenu-container
+        .wp-block-navigation-item__content:hover,
+    .site-header
+        .wp-block-navigation__submenu-container
+        .wp-block-navigation-item__content:focus-visible {
+        background: color-mix(
+            in srgb,
+            var(--wp--preset--color--surface) 70%,
+            var(--wp--preset--color--foreground) 30%
+        );
+        color: var(--wp--preset--color--foreground);
+        opacity: 0.92;
+    }
+
+
+/* PASSED */
+/* ==========================================================================
+	Mobile Menu (Core Navigation Overlay)
+    ======================================================================= */
+
+    .site-header .wp-block-navigation__responsive-container-open {
+        background: transparent;
+        color: var(--wp--preset--color--foreground);
+        border-radius: 999px;
+        padding: 0.6em 1em;
+        line-height: 1;
+        margin-top: 5px;
+        background-color: var(--wp--preset--color--surface);
+    }
+
+    /* Overlay background */
+    .wp-block-navigation:not(.has-background)
+        .wp-block-navigation__responsive-container.is-menu-open {
+        background-color: var(--wp--preset--color--surface);
+    }
+
+    .site-header .wp-block-navigation__responsive-container-open:hover,
+    .site-header .wp-block-navigation__responsive-container-open:focus-visible {
+        background: var(--wp--preset--color--surface);
+    }
+
+
+
+/* PASSED */
+/* ==========================================================================
+	Detailed Styling of Mobile Open Menu
+	======================================================================= */
+
+    /* Make each top-level item full-width so borders span nicely */
+    .site-header
+        .wp-block-navigation__responsive-container.is-menu-open
+        .wp-block-navigation-item {
+        width: 100%;
+    }
+
+    /* Separator lines */
+    .site-header
+        .wp-block-navigation__responsive-container.is-menu-open
+        .wp-block-navigation-item__content {
+        width: 100%;
+        padding: 0.9rem 0;
+        border-bottom: 1px solid var(--wp--preset--color--border);
+        border-radius: 0;
+    }
+
+    /* Close button styling + position (same as open button) */
+    .site-header .wp-block-navigation__responsive-container-close {
+        background: transparent;
+        color: var(--wp--preset--color--foreground);
+        border-radius: 999px;
+        padding: 0.6em 1em;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2001;
+    }
+
+    .site-header
+        .wp-block-navigation__responsive-container.is-menu-open
+        .wp-block-navigation-item__content {
+        display: block;
+        /* padding: 0.75rem 0.75rem; */
+        /* border-radius: 0.75rem; */
+        font-size: var(--wp--preset--font-size--l);
+        color: var(--wp--preset--color--foreground);
+    }
+
+/*  ==========================================================================
+	TRACE: Navigation Responsive Switch (CSS-only)
+	- Switch early (980px) rather than WP's default (~600px)
+	======================================================================= */
+
+    @media (max-width: 980px) {
+        /* Hide desktop nav list */
+        .site-header .wp-block-navigation__container {
+            display: none;
+        }
+
+        /* Show mobile toggle */
+        .site-header .wp-block-navigation__responsive-container-open {
+            display: inline-flex;
+        }
+
+        .site-header
+            .wp-block-navigation__responsive-container.is-menu-open
+            .wp-block-navigation__submenu-container {
+            margin-top: 0 !important; /* remove desktop dropdown gap */
+            transform: none !important; /* stop desktop translateY animation */
+            transition: none !important; /* prevent hover/focus transitions fighting */
+        }
+    }
+
+
+
+/* PASSED */
+/*  =========================================================================
+    TRACE: Smart Header + WP Navigation Overlay Fixes
+    ======================================================================= */
+    /* Smart header (class: is-smart)
+    Behaviour:
+    - scroll down: fade/slide out
+    - scroll up: fade/slide back in
+    - menu open (WP): force visible
+    */
+
+    .site-header.is-smart {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        overflow: visible;
+    }
+
+
+
+/* PASSED */
+/*  =========================================================================
+    WP Navigation: force mobile overlay to be viewport-level (not contained)
+	Works with smart header (.is-smart)
+	======================================================================= */
+
+    /* When the menu is open, make the responsive container a true full-screen overlay */
+    html.has-modal-open .site-header.is-smart .wp-block-navigation__responsive-container.is-menu-open {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        overflow: auto !important;
+        z-index: 2000 !important;
+    }
+
+
+
+
+/* PASSED */
+/*  =========================================================================
+    WP Navigation: hide open button when mobile menu is open
+	======================================================================= */
+
+    /* Hide the "open menu" button when the modal is open */
+    html.has-modal-open .wp-block-navigation__responsive-container-open {
+        display: none !important;
+    }
+
+    /* Ensure the close button remains visible and clickable */
+    html.has-modal-open .wp-block-navigation__responsive-container-close {
+        display: inline-flex !important;
+        z-index: 2001;
+    }
+
+/*  =========================================================================
+    WP Navigation: position close button where open button was
+	======================================================================= */
+
+    /* Make the navigation wrapper a positioning context */
+    .site-header.is-smart .wp-block-navigation {
+        position: relative;
+    }
+
+    /* Hide open button when menu is open (already added, repeated for clarity) */
+    html.has-modal-open .wp-block-navigation__responsive-container-open {
+        display: none !important;
+    }
+
+    /* Position close button top-right (same place as open button) */
+    html.has-modal-open .site-header.is-smart .wp-block-navigation__responsive-container-close {
+        position: absolute;
+        top: 18px;
+        right: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2001;
+    }
+
+
+
+
+
+/* NEW */
+/* =========================
+ * assets/css/mobile-nav.css
+ * ====================== */
+
+/* Make the label link fill the row */
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content {
+	display: block;
+	width: 100%;
+	padding: 1.2rem 0 1.2rem 0 !important;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
+    background: var(--wp--preset--color--border);
+}
+
+/* Tidy up descriptions in mobile overlay */
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__description {
+	display: block;
+	margin-top: 0.25rem;
+	font-size: 0.875em;
+	opacity: 0.8;
+}
+
+/* Sub Menu */
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
+    display: none !important;
+}
+
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content .wp-block-navigation-item__label {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content .wp-block-navigation-item__description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+
+
+/*  ========================================================
+    Columns: 4+ cols => 2 cols on mobile, then 1 col smaller
+    Works in editor + frontend
+    ====================================================== */
+
+    .wp-block-columns {
+        flex-wrap: nowrap;
+    }
+
+/*  ========================================================
+    3–4 columns: 2-up tablet, 1-up mobile
+    ====================================================== */
+
+    @media (max-width: 900px) {
+        .wp-site-blocks .wp-block-columns:has(> .wp-block-column:nth-child(3)),
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(3)) {
+            flex-wrap: wrap;
+        }
+
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(3))
+            > .wp-block-column,
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(3))
+            > .wp-block-column {
+            flex-basis: calc(50% - (var(--wp--style--block-gap, 1.5rem) / 2));
+        }
+    }
+
+    @media (max-width: 401px) {
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(3))
+            > .wp-block-column,
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(3))
+            > .wp-block-column {
+            flex-basis: 100%;
+        }
+    }
+
+/*  ========================================================
+    5–6 columns: 3-up → 2-up → 1-up
+    ===================================================== */
+
+    @media (max-width: 1100px) {
+        .wp-site-blocks .wp-block-columns:has(> .wp-block-column:nth-child(5)),
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(5)) {
+            flex-wrap: wrap;
+        }
+
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(5))
+            > .wp-block-column,
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(5))
+            > .wp-block-column {
+            flex-basis: calc(
+                33.333% - (var(--wp--style--block-gap, 1.5rem) * 2 / 3)
+            );
+        }
+    }
+
+    @media (max-width: 800px) {
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(5))
+            > .wp-block-column,
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(5))
+            > .wp-block-column {
+            flex-basis: calc(50% - (var(--wp--style--block-gap, 1.5rem) / 2));
+        }
+    }
+
+    @media (max-width: 401px) {
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(5))
+            > .wp-block-column,
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(5))
+            > .wp-block-column {
+            flex-basis: 100%;
+        }
+    }
+
+    /* 1) At <= 781px, if a Columns block has 4+ columns, show 2-up */
+
+    @media (max-width: 781px) {
+        /* Frontend */
+        .wp-site-blocks .wp-block-columns:has(> .wp-block-column:nth-child(4)) {
+            flex-wrap: wrap !important;
+        }
+
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(4))
+            > .wp-block-column {
+            flex-basis: calc(
+                50% - (var(--wp--style--block-gap, 1.5rem) / 2)
+            ) !important;
+            min-width: 0;
+        }
+
+        /* Editor canvas */
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(4)) {
+            flex-wrap: wrap !important;
+        }
+
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(4))
+            > .wp-block-column {
+            flex-basis: calc(
+                50% - (var(--wp--style--block-gap, 1.5rem) / 2)
+            ) !important;
+            min-width: 0;
+        }
+    }
+
+    /* 2) At <= 520px, collapse those 4+ col layouts to 1 column */
+
+    @media (max-width: 401px) {
+        .wp-site-blocks
+            .wp-block-columns:has(> .wp-block-column:nth-child(4))
+            > .wp-block-column,
+        .editor-styles-wrapper
+            .wp-block-columns:has(> .wp-block-column:nth-child(4))
+            > .wp-block-column {
+            /* flex-basis: 100% !important; */
+            flex-basis: 100%;
+        }
+    }
+
+
+
+
+
+/*  =========================================================================
+    Query Loop – Add Number Loop
+    - Numbered Query Loop (TRACE)
+    ====================================================================== */
+
+    .wp-block-query.numbered-loop .wp-block-post-template {
+        counter-reset: trace-row;
+    }
+
+    .wp-block-query.numbered-loop .wp-block-post-template > li.wp-block-post {
+        counter-increment: trace-row;
+    }
+
+    /* Put the number into the empty <p> in the first column */
+    .wp-block-query.numbered-loop .wp-block-post-template > li.wp-block-post
+    > .wp-block-columns > .wp-block-column:first-child > p:empty::before {
+        content: counter(trace-row, decimal-leading-zero);
+        display: inline-block;
+        font-variant-numeric: tabular-nums;
+        opacity: 0.6;
+    }
+
+    .editor-styles-wrapper .wp-block-query.numbered-loop .wp-block-post-template {
+        counter-reset: trace-row;
+    }
+
+    .editor-styles-wrapper .wp-block-query.numbered-loop .wp-block-post-template > li.wp-block-post {
+        counter-increment: trace-row;
+    }
+
+    .editor-styles-wrapper .wp-block-query.numbered-loop .wp-block-post-template > li.wp-block-post
+    > .wp-block-columns > .wp-block-column:first-child > p:empty::before {
+        content: counter(trace-row, decimal-leading-zero);
+        display: inline-block;
+        font-variant-numeric: tabular-nums;
+        opacity: 0.6;
+    }
+
+    .wp-block-query.numbered-loop .wp-block-post-template > li.wp-block-post
+    > .wp-block-columns > .wp-block-column:first-child {
+        text-align: left;
+    }
+
+
+
+
+
+/*  =========================================================================
+    Query Loop – Responsive Grid Control
+    - Desktop: user-defined column count
+    - Tablet: force 3 columns
+    - Mobile: force 1 column
+    ====================================================================== */
+
+    /* Ensure we only target grid-based query loops */
+    .wp-block-query .wp-block-post-template.is-layout-grid {
+        display: grid;
+    }
+
+    /* =========================
+    Tablet breakpoint
+    ========================= */
+    @media (max-width: 1024px) {
+        /* .wp-block-query .wp-block-post-template.is-layout-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        } */
+    }
+
+    /* =========================
+    Mobile breakpoint
+    ========================= */
+    @media (max-width: 640px) {
+        .wp-block-query .wp-block-post-template.is-layout-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+
+
+
+
+
+
+
+
+/*  =========================================================================
+    TRACE REVEAL
+    /assets/css/reveal.css
+    ====================================================================== */
+
+    /* Base state */
+    .trace-reveal .wp-block-post-template > li.wp-block-post {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    /* Visible */
+    .trace-reveal .wp-block-post-template > li.wp-block-post.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Image wipe */
+    .trace-reveal .wp-block-post-featured-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .trace-reveal .wp-block-post-featured-image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--wp--preset--color--background);
+        transform: translateY(0);
+        transition: transform 900ms cubic-bezier(0.2, 0.7, 0.1, 1);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    /* Reveal */
+    .trace-reveal .wp-block-post.is-visible
+    .wp-block-post-featured-image::before {
+        transform: translateY(100%);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        .trace-reveal .wp-block-post-template > li.wp-block-post {
+            opacity: 1;
+            transform: none;
+        }
+        .trace-reveal .wp-block-post-featured-image::before {
+            transform: translateY(100%);
+            transition: none;
+        }
+    }
+
+
+    /* Base: no delay */
+    .trace-reveal .wp-block-post-template > li.wp-block-post {
+        transition-delay: 0ms;
+    }
+
+
+
+    /* Image base state */
+    .trace-reveal .wp-block-post-featured-image img {
+        transform: translateY(
+            calc(var(--wp--custom--motion--parallax-distance) * -1)
+        );
+        transition:
+            transform var(--wp--custom--motion--duration-slow)
+            var(--wp--custom--motion--ease-out);
+        will-change: transform;
+    }
+
+    /* When revealed, image settles naturally */
+    .trace-reveal .wp-block-post.is-visible
+    .wp-block-post-featured-image img {
+        transform: translateY(0);
+    }
+
+    .trace-reveal .wp-block-post-featured-image img {
+        transition:
+            transform var(--wp--custom--motion--duration-base)
+            var(--wp--custom--motion--ease-soft);
+    }
+
+    .trace-reveal .wp-block-post:hover
+    .wp-block-post-featured-image img {
+        transform: translateY(
+            calc(var(--wp--custom--motion--hover-lift) * -1)
+        );
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+        .trace-reveal .wp-block-post-featured-image img {
+            transform: none !important;
+            transition: none !important;
+        }
+    }
+
+
+
+
+
+
+
+
+/*  =========================================================================
+    TRACE FEATURED REVEAL
+    /assets/css/featured-reveal.css
+    ====================================================================== */
+
+    /* Scope everything to this specific Query Loop */
+    .trace-featured-reveal .wp-block-post-template > li.wp-block-post {
+        position: relative;
+    }
+
+    /* Hide the featured image in the normal flow */
+    .trace-featured-reveal .wp-block-post-featured-image {
+        display: none;
+    }
+
+    /* The floating preview element (injected by JS) */
+    .trace-featured-reveal-preview {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 160px;              /* small thumbnail */
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border-radius: 12px;
+        pointer-events: none;
+        z-index: 9999;
+
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0.98);
+        transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .trace-featured-reveal-preview.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    .trace-featured-reveal-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        .trace-featured-reveal-preview {
+            transition: none;
+        }
+    }
+
+
+
+
+
+
+/*  =========================================================================
+    TRACE: Animated gradient text (ULTRA-SOFT rotating sweep)
+	- Far pivot + very wide feather + avoids pure background peak
+	======================================================================= */
+
+    .animated-text { color: var(--wp--preset--color--foreground, currentColor); }
+
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+
+        @property --trace-spin {
+            syntax: "<angle>";
+            inherits: false;
+            initial-value: 0turn;
+        }
+
+        .animated-text {
+            --trace-a: var(--wp--preset--color--foreground);
+            --trace-b: var(--wp--preset--color--background);
+
+            /* Softness controls */
+            --trace-pivot-x: 50%;
+            --trace-pivot-y: 380%; /* bigger = softer, try 320%–520% */
+            --trace-b-peak: 48%;    /* how much "background" at the brightest point (lower = softer) */
+
+            /* Build a softer “peak” colour (never hits full background unless you want it to) */
+            --trace-peak: color-mix(in srgb, var(--trace-b) var(--trace-b-peak), var(--trace-a));
+
+            --trace-spin: 0turn;
+
+            background-image: conic-gradient(
+                from var(--trace-spin) at var(--trace-pivot-x) var(--trace-pivot-y),
+
+                /* Hold A for a long time */
+                var(--trace-a) 0deg,
+                var(--trace-a) 110deg,
+
+                /* VERY wide feather into a soft peak (non-linear-ish by spacing) */
+                color-mix(in srgb, var(--trace-a) 98%, var(--trace-b)) 135deg,
+                color-mix(in srgb, var(--trace-a) 94%, var(--trace-b)) 150deg,
+                color-mix(in srgb, var(--trace-a) 88%, var(--trace-b)) 162deg,
+                color-mix(in srgb, var(--trace-a) 80%, var(--trace-b)) 172deg,
+                color-mix(in srgb, var(--trace-a) 70%, var(--trace-b)) 180deg,
+                color-mix(in srgb, var(--trace-a) 60%, var(--trace-b)) 188deg,
+                color-mix(in srgb, var(--trace-a) 72%, var(--trace-b)) 198deg,
+                color-mix(in srgb, var(--trace-a) 84%, var(--trace-b)) 210deg,
+                color-mix(in srgb, var(--trace-a) 92%, var(--trace-b)) 225deg,
+
+                /* Soft peak (NOT pure background) */
+                var(--trace-peak) 240deg,
+
+                /* Fade back out */
+                color-mix(in srgb, var(--trace-a) 92%, var(--trace-b)) 255deg,
+                color-mix(in srgb, var(--trace-a) 84%, var(--trace-b)) 270deg,
+                color-mix(in srgb, var(--trace-a) 94%, var(--trace-b)) 290deg,
+
+                /* Return to A */
+                var(--trace-a) 320deg,
+                var(--trace-a) 360deg
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+
+            animation: trace_spin_gradient 22s linear infinite;
+            will-change: --trace-spin;
+        }
+
+        @keyframes trace_spin_gradient { to { --trace-spin: 1turn; } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animated-text { animation: none; --trace-spin: .2turn; }
+        }
+    }
+
+
+
+
+
+
+/*  =========================================================================
+    Trace: Scroll CTA (marquee + swapping gallery)
+    - Full width infinite marquee
+    - FitText paragraph (height-capped)
+    - Gallery behaves like a single image slot (JS swaps images)
+    - Pixel-perfect loop distance set by JS: --trace-marquee-distance
+    ====================================================================== */
+
+    .trace-scroll-cta {
+        --trace-scroll-speed: 18s; /* higher = slower */
+        --trace-gap: clamp(1rem, 3vw, 3rem);
+        --trace-item-gap: clamp(0.75rem, 2vw, 1.5rem);
+        --trace-pad-x: clamp(1rem, 3vw, 3rem);
+        --trace-pad-y: clamp(0.75rem, 2vw, 1.5rem);
+        --trace-gallery-max: 400px;
+        --trace-text-max-h: min(400px, 45vh);
+
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: var(--trace-pad-y) var(--trace-pad-x);
+    }
+
+    /* Rail is the viewport (does not animate) */
+    .trace-scroll-cta__rail {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Track is the animated belt (JS duplicates items + sets --trace-marquee-distance) */
+    .trace-scroll-cta__track {
+        display: flex;
+        align-items: center;
+        gap: var(--trace-gap);
+        width: max-content;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+
+        animation: trace-scroll-cta-marquee var(--trace-scroll-speed) linear infinite;
+    }
+
+    .trace-scroll-cta:hover .trace-scroll-cta__track {
+	animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.trace-scroll-cta__track {
+		animation: none;
+	}
+}
+
+    /* Each repeated unit (text + gallery) */
+    .trace-scroll-cta__item {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: var(--trace-item-gap);
+        white-space: nowrap;
+    }
+
+    /* Headline paragraph: explicit font-size matches the height cap so the text fills the row consistently across browsers.
+       We deliberately don't use WordPress's fitText support here — fitText's binary search misbehaves inside a flex
+       container with width: max-content (the marquee track), because clientWidth grows with the text and the height
+       check resolves differently in Chrome vs Safari. Setting font-size from the same CSS variable as max-height
+       gives us Safari-style output in every browser, and removes the ResizeObserver thrash that was freezing the
+       marquee animation in Chrome. */
+    .trace-scroll-cta__item > p,
+    .trace-scroll-cta__item .wp-block-paragraph {
+        flex: 1 1 auto;
+        margin: 0;
+        max-height: var(--trace-text-max-h);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        white-space: nowrap;
+
+        /* Drive the size from the same variable that caps the height. !important defends against
+           any inline font-size that fitText may still set (e.g. on patterns that already had
+           fitText:true saved into post_content before this fix). */
+        font-size: var(--trace-text-max-h) !important;
+    }
+
+    /* Aliases: support both the new headline class and any legacy .has-fit-text markup
+       that may already be saved on existing pages. */
+    .trace-scroll-cta__item .trace-scroll-cta__headline,
+    .trace-scroll-cta__item .has-fit-text {
+        font-size: var(--trace-text-max-h) !important;
+        line-height: 1;
+    }
+
+    /* Gallery constrained (derived from --trace-gallery-max) */
+    .trace-scroll-cta__item .wp-block-gallery {
+        --trace-gallery-inner-max: calc(var(--trace-gallery-max) * 0.75);
+
+        flex: 0 0 auto;
+        width: min(var(--trace-gallery-inner-max), 40vw);
+        max-width: var(--trace-gallery-inner-max);
+        margin: 0;
+    }
+
+    /* Gallery becomes a single "slot" */
+    .trace-scroll-cta__item .wp-block-gallery.has-nested-images {
+        position: relative;
+        overflow: hidden;
+        border-radius: 999px; /* optional */
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Layer each nested image */
+    .trace-scroll-cta__item .wp-block-gallery.has-nested-images .wp-block-image {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 120ms linear;
+        will-change: opacity;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .trace-scroll-cta__item .wp-block-gallery.has-nested-images .wp-block-image.is-active {
+        opacity: 1;
+    }
+
+    .trace-scroll-cta__item .wp-block-gallery.has-nested-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Pixel-perfect marquee loop (distance is set by JS) */
+    @keyframes trace-scroll-cta-marquee {
+        0%   { transform: translate3d(0, 0, 0); }
+        100% { transform: translate3d(calc(-1 * var(--trace-marquee-distance, 0px)), 0, 0); }
+    }
+
+    /* Reduced motion: no marquee, show as a normal row */
+    @media (prefers-reduced-motion: reduce) {
+        .trace-scroll-cta {
+            overflow: visible;
+        }
+
+        .trace-scroll-cta__rail {
+            overflow: visible;
+        }
+
+        .trace-scroll-cta__track {
+            animation: none;
+            transform: none;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .trace-scroll-cta__item {
+            white-space: normal;
+        }
+    }
+
+
+
+/*  =========================================================================
+    Trace Scroll CTA: responsive scaling (mobile)
+    - Reduces text + gallery size so it feels natural on small screens
+    ====================================================================== */
+
+    /* Tablet down */
+    @media (max-width: 900px) {
+        .trace-scroll-cta {
+            --trace-gap: clamp(0.75rem, 3vw, 1.5rem);
+            --trace-item-gap: clamp(0.5rem, 2.5vw, 1rem);
+            --trace-pad-x: clamp(0.75rem, 3vw, 1.5rem);
+            --trace-pad-y: clamp(0.5rem, 2vw, 1rem);
+
+            /* cap the big fit text so it doesn't dominate */
+            --trace-text-max-h: min(260px, 32vh);
+
+            /* scale gallery down a bit */
+            --trace-gallery-max: 320px;
+        }
+
+        /* keep your derived inner max at 75% of gallery max */
+        .trace-scroll-cta__item .wp-block-gallery {
+            --trace-gallery-inner-max: calc(var(--trace-gallery-max) * 0.75);
+            width: min(var(--trace-gallery-inner-max), 46vw);
+            max-width: var(--trace-gallery-inner-max);
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+        .trace-scroll-cta {
+            --trace-gap: clamp(0.6rem, 4vw, 1.1rem);
+            --trace-item-gap: clamp(0.5rem, 4vw, 0.9rem);
+            --trace-pad-x: 1rem;
+            --trace-pad-y: 0.75rem;
+
+            /* tighter cap for mobile */
+            --trace-text-max-h: min(180px, 24vh);
+
+            /* smaller gallery on mobile */
+            --trace-gallery-max: 260px;
+        }
+
+        /* reduce the fallback clamp too, in case fitText isn't active */
+        .trace-scroll-cta__item .has-fit-text {
+            font-size: clamp(1.2rem, 7vw, 3rem);
+        }
+
+        /* prevent the gallery eating the row on small screens */
+        .trace-scroll-cta__item .wp-block-gallery {
+            --trace-gallery-inner-max: calc(var(--trace-gallery-max) * 0.75);
+            width: min(var(--trace-gallery-inner-max), 44vw);
+            max-width: var(--trace-gallery-inner-max);
+        }
+    }
+
+    /* Tiny phones */
+    @media (max-width: 420px) {
+        .trace-scroll-cta {
+            --trace-text-max-h: min(150px, 22vh);
+            --trace-gallery-max: 220px;
+        }
+
+        .trace-scroll-cta__item .has-fit-text {
+            font-size: clamp(1.1rem, 8vw, 2.6rem);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+/*  =========================================================================
+    Trace Pricing Cards
+    - Pricing
+    - Badges
+    - Responsive
+    ====================================================================== */
+
+    /* Trace – Pricing Cards Grid */
+    /* Trace – Pricing cards: keep Columns in editor, render as responsive grid */
+    .wp-block-columns.trace-pricing-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        /* IMPORTANT: do NOT set gap here.
+        Let WordPress output gap from the editor controls. */
+    }
+
+    /* Stop Columns/flex sizing rules from fighting the grid */
+    .wp-block-columns.trace-pricing-grid > .wp-block-column {
+        /* width: auto !important;
+        flex: initial !important; */
+        width: auto;
+        flex: initial;
+        min-width: 0; /* avoids overflow from long content */
+    }
+
+    .price {
+		gap: 0.15ch;
+		white-space: nowrap;
+	}
+
+	.price p {
+		margin: 0;
+		line-height: 1;
+	}
+
+	.price-currency {
+		font-size: 0.5em;
+		/* vertical-align: super; */
+		opacity: 0.8;
+	}
+
+
+
+
+
+
+
+
+ /* --- TAB LIST --- */
+.trace-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 1vw, 14px);
+  justify-content: center;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+/* Prevent “all panels hidden” flash before JS runs */
+.trace-tabs .trace-panel:first-of-type {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.trace-tab a {
+  color: var(--wp--preset--color--foreground);
+  background: var(--wp--preset--color--surface);
+}
+
+.trace-tab a:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.trace-tab.is-active a {
+  font-weight: 600;
+  background: var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--background);
+
+  box-shadow:
+    0 0 0 2px var(--wp--preset--color--background),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+
+  transform: translateY(-1px);
+}
+
+.trace-tab a:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, currentColor 25%, transparent),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* --- PANELS: stacked + fade --- */
+.trace-panels {
+  position: relative;
+  /* height animates between panels */
+  transition: height 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.trace-panel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(8px) scale(0.995);
+  transition:
+    opacity 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.trace-panel.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  position: relative; /* active defines normal flow */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .trace-panels,
+  .trace-panel,
+  .trace-tab a {
+    transition: none !important;
+  }
+}
+
+
+

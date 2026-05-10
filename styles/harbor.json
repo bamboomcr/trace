@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "title": "Harbor",
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "Background",
+                    "slug": "background",
+                    "color": "#2D5973"
+                },
+                {
+                    "name": "Surface",
+                    "slug": "surface",
+                    "color": "#3A6585"
+                },
+                {
+                    "name": "Border",
+                    "slug": "border",
+                    "color": "#4D7891"
+                },
+                {
+                    "name": "Muted",
+                    "slug": "muted",
+                    "color": "#B8C9D6"
+                },
+                {
+                    "name": "Foreground",
+                    "slug": "foreground",
+                    "color": "#F4F1EA"
+                },
+                {
+                    "name": "Text",
+                    "slug": "text",
+                    "color": "#F4F1EA"
+                },
+                {
+                    "name": "Heading",
+                    "slug": "heading",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "name": "Background Inverse",
+                    "slug": "background-inverse",
+                    "color": "#F4F1EA"
+                },
+                {
+                    "name": "Action",
+                    "slug": "action",
+                    "color": "#FF7A5C"
+                },
+                {
+                    "name": "Accent 2",
+                    "slug": "accent-2",
+                    "color": "#E8B23F"
+                },
+                {
+                    "name": "Danger",
+                    "slug": "danger",
+                    "color": "#D14B3F"
+                },
+                {
+                    "name": "Highlight",
+                    "slug": "highlight",
+                    "color": "#F0D670"
+                }
+            ]
+        }
+    }
+}

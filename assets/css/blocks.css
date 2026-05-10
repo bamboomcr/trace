@@ -1,0 +1,1775 @@
+/*  =========================================================================
+	TRACE
+	Front-end Stylesheet Organisation
+	======================================================================= */
+
+/*  =========================================================================
+	TRACE: Header height token + behaviour
+    ====================================================================== */
+
+/*  =========================================================================
+	Header
+	======================================================================= */
+.site-header {
+	z-index: 1000;
+	width: 100%;
+}
+
+/* Fixed header */
+.site-header.is-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* Static header: normal flow, scrolls away naturally */
+.site-header.is-scroll {
+	position: relative;
+}
+
+/*  =========================================================================
+	TRACE: Make fixed header work even with wp-block-template-part wrapper
+    ====================================================================== */
+/* Admin bar offset */
+body.admin-bar .wp-block-template-part:has(> .site-header.is-fixed) {
+	top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/* Admin bar safety */
+body.admin-bar .site-header.is-fixed {
+	top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/* List block style: No bullets / numbers */
+.is-style-no-markers,
+.is-style-no-markers ul,
+.is-style-no-markers ol {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: pretty;
+}
+
+/* Change color of selection when 
+   user selects the content */
+::selection {
+	background-color: var(--wp--preset--color--action);
+	color: var(--wp--preset--color--background);
+}
+
+
+/*  =========================================================================
+	LINKS: 
+    ====================================================================== */
+
+main a:not(.wp-block-button__link),
+footer a:not(.wp-block-button__link) {
+	position: relative;
+	text-decoration: none;
+	color: currentColor;
+}
+
+main a:not(.wp-block-button__link)::after,
+footer a:not(.wp-block-button__link)::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -0.25em;
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+	opacity: 0.4;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease;
+}
+
+main a:not(.wp-block-button__link):hover::after,
+main a:not(.wp-block-button__link):focus-visible::after,
+footer a:not(.wp-block-button__link):hover::after,
+footer a:not(.wp-block-button__link):focus-visible::after {
+	transform: scaleX(1);
+}
+
+.has-display-xl-font-size a::after,
+.has-display-l-font-size a::after,
+.has-display-m-font-size a::after {
+	height: 2px;
+}
+
+
+/*  =========================================================================
+	Paragraph link-arrow styles (registered in functions.php)
+	- .is-style-link-arrow         → arrow appended to the paragraph
+	- .is-style-link-arrow-left    → arrow prepended to the paragraph
+
+	The arrow is placed on the PARAGRAPH's own ::after / ::before, not on
+	any inner <a>. That keeps the existing global underline animation
+	(main a::after) intact when the paragraph contains a link, and it also
+	makes the arrow appear correctly when the paragraph has no <a> (e.g.
+	the hero "Get started today" usage).
+
+	display: inline-block on the pseudo-element lets us animate transform
+	on hover; the parent <p> keeps its normal block layout.
+	====================================================================== */
+
+/* Right arrow */
+.is-style-link-arrow::after {
+	content: "→";
+	display: inline-block;
+	margin-left: 0.4em;
+	line-height: 1;
+	font-feature-settings: "ss01";
+	transition: transform 0.15s ease;
+}
+
+.is-style-link-arrow:hover::after,
+.is-style-link-arrow:focus-within::after {
+	transform: translateX(0.25em);
+}
+
+/* Left arrow */
+.is-style-link-arrow-left::before {
+	content: "←";
+	display: inline-block;
+	margin-right: 0.4em;
+	line-height: 1;
+	font-feature-settings: "ss01";
+	transition: transform 0.15s ease;
+}
+
+.is-style-link-arrow-left:hover::before,
+.is-style-link-arrow-left:focus-within::before {
+	transform: translateX(-0.25em);
+}
+
+
+
+/*  =========================================================================
+	Image links should NOT get editorial link treatments
+	======================================================================= */
+
+/* Any anchor that directly contains an image */
+a:has(img),
+a:has(svg),
+a:has(picture) {
+	--link-underline-opacity: 0;
+	--link-border-opacity: 0;
+	text-decoration: none;
+	border: 0;
+	background: none;
+}
+
+/* Kill hover/focus animations specifically */
+a:has(img):hover,
+a:has(img):focus,
+a:has(img):focus-visible {
+	text-decoration: none;
+	border: 0;
+	background: none;
+}
+
+/* Safety: prevent pseudo-element arrows/borders */
+a:has(img)::before,
+a:has(img)::after,
+a:has(svg)::before,
+a:has(svg)::after,
+a:has(picture)::before,
+a:has(picture)::after {
+	display: none !important;
+	content: none !important;
+}
+
+/*  =========================================================================
+	Block Styles (cards, etc.)
+	====================================================================== */
+
+/* .wp-block-group.is-style-card {
+		background: var(--wp--preset--color--surface);
+		border: 1px solid var(--wp--preset--color--border);
+		border-radius: 0.75rem;
+		padding: var(--wp--preset--spacing--m);
+	} */
+
+/* Team Member */
+/* .wp-block-group.is-style-team-member {
+		background: var(--wp--preset--color--surface);
+		border: 1px solid var(--wp--preset--color--border);
+		border-radius: 0.75rem;
+		padding: var(--wp--preset--spacing--m);
+		overflow: hidden;
+	} */
+
+
+/* ==========================================================================
+	Group block styles
+	Use theme defaults only when the user has not chosen custom colours
+	========================================================================== */
+
+.wp-block-group.is-style-card,
+.wp-block-group.is-style-team-member {
+	border-radius: 0.75rem;
+	padding: var(--wp--preset--spacing--m);
+}
+
+.wp-block-group.is-style-team-member {
+	overflow: hidden;
+}
+
+/* Default background only when no custom background has been applied */
+.wp-block-group.is-style-card:not(.has-background):not([style*="background"]),
+.wp-block-group.is-style-team-member:not(.has-background):not([style*="background"]) {
+	background-color: var(--wp--preset--color--surface);
+}
+
+/* Default border only when no custom border colour/style has been applied */
+.wp-block-group.is-style-card:not(.has-border-color):not([style*="border"]),
+.wp-block-group.is-style-team-member:not(.has-border-color):not([style*="border"]) {
+	border: 1px solid var(--wp--preset--color--border);
+}
+
+/* Only apply muted paragraph colour when the paragraph itself has no text colour */
+/* .wp-block-group.is-style-team-member p:not(.has-text-color):not([style*="color"]) {
+		color: var(--wp--preset--color--muted);
+	} */
+
+/*  =========================================================================
+	TRACE: Disable core top-level block spacing
+	Trace manages vertical rhythm explicitly
+    ======================================================================= */
+
+.wp-site-blocks>* {
+	margin-block-start: 0;
+}
+
+/* ==========================================================================
+   Navigation Link – Button Styles (match Button System)
+   ========================================================================== */
+
+/* Primary button-style nav link */
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+
+	/* match .wp-block-button__link */
+	padding: 0.6em 1.333em;
+	border-radius: 999px;
+	border: 1px solid transparent;
+	text-decoration: none;
+	line-height: 1;
+	font-weight: 600;
+	font-feature-settings: "ss01";
+	white-space: nowrap;
+
+	/* match token approach */
+	background: var(--wp--preset--color--action);
+	color: var(--wp--preset--color--background) !important;
+
+	/* match transitions (no floaty transform/filter) */
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Hover/focus matches your fill button behaviour */
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:hover,
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
+	background: var(--wp--preset--color--action);
+	color: var(--wp--preset--color--background) !important;
+	border-color: transparent;
+}
+
+/* Focus ring matches your button system */
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--action);
+	outline-offset: 3px;
+}
+
+/* Outline button-style nav link */
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+
+	/* match .wp-block-button__link */
+	padding: 0.6em 1.333em;
+	border-radius: 999px;
+	border: 1px solid var(--wp--preset--color--border);
+	text-decoration: none;
+	line-height: 1;
+	font-weight: 600;
+	font-feature-settings: "ss01";
+	white-space: nowrap;
+
+	background: transparent;
+	color: var(--wp--preset--color--foreground) !important;
+
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:hover,
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:focus-visible {
+	background: var(--wp--preset--color--surface);
+	border-color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--foreground) !important;
+}
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--action);
+	outline-offset: 3px;
+}
+
+/* Mobile overlay: make button links full-width and centered */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-link.is-style-as-button>a,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-link.is-style-as-button-outline>a {
+	width: 100%;
+	justify-content: center;
+}
+
+/*  =========================================================================
+	Button System (token-driven)
+	Buttons are UI elements, not editorial links
+	====================================================================== */
+
+/* Base button element (actual clickable part) */
+.wp-block-button__link,
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=file] {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+
+	border-radius: 999px;
+	border: 1px solid transparent;
+	text-decoration: none;
+	padding: 0.6em 1.333em;
+
+	line-height: 1;
+	font-feature-settings: "ss01";
+
+	transition: background-color 0.15s ease,
+		color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+/* Focus accessibility */
+.wp-block-button__link:focus-visible {
+	outline: 2px solid var(--wp--preset--color--action);
+	outline-offset: 3px;
+}
+
+/* Default / Fill buttons */
+.wp-block-button:not(.is-style-outline):not(.is-style-ghost):not(.is-style-ghost-arrow):not(.is-style-ghost-arrow-left) .wp-block-button__link:hover,
+.wp-block-button:not(.is-style-outline):not(.is-style-ghost):not(.is-style-ghost-arrow):not(.is-style-ghost-arrow-left) .wp-block-button__link:focus-visible {
+	background: var(--wp--preset--color--action);
+	color: var(--wp--preset--color--background);
+}
+
+/* FILL explicitly */
+.wp-block-button.is-style-fill .wp-block-button__link:hover,
+.wp-block-button.is-style-fill .wp-block-button__link:focus-visible {
+	background: var(--wp--preset--color--action);
+	color: var(--wp--preset--color--background);
+}
+
+/* OUTLINE */
+.wp-block-button.is-style-outline .wp-block-button__link {
+	background: transparent;
+	color: var(--wp--preset--color--foreground);
+	border-color: var(--wp--preset--color--border);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-outline .wp-block-button__link:focus-visible {
+	background: var(--wp--preset--color--surface);
+	border-color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--foreground);
+}
+
+/* GHOST + ARROW variants */
+.wp-block-button.is-style-ghost .wp-block-button__link,
+.wp-block-button.is-style-ghost-arrow .wp-block-button__link,
+.wp-block-button.is-style-ghost-arrow-left .wp-block-button__link {
+	background: transparent;
+	color: var(--wp--preset--color--foreground);
+	border-color: transparent;
+}
+
+.wp-block-button.is-style-ghost .wp-block-button__link:hover,
+.wp-block-button.is-style-ghost .wp-block-button__link:focus-visible,
+.wp-block-button.is-style-ghost-arrow .wp-block-button__link:hover,
+.wp-block-button.is-style-ghost-arrow .wp-block-button__link:focus-visible,
+.wp-block-button.is-style-ghost-arrow-left .wp-block-button__link:hover,
+.wp-block-button.is-style-ghost-arrow-left .wp-block-button__link:focus-visible {
+	background: var(--wp--preset--color--surface);
+	color: var(--wp--preset--color--foreground);
+}
+
+/* Arrow Right */
+.wp-block-button.is-style-primary-arrow .wp-block-button__link::after,
+.wp-block-button.is-style-ghost-arrow .wp-block-button__link::after {
+	content: "→";
+	font-size: 1em;
+	line-height: 1;
+	transition: transform 0.15s ease;
+}
+
+.wp-block-button.is-style-primary-arrow .wp-block-button__link:hover::after,
+.wp-block-button.is-style-ghost-arrow .wp-block-button__link:hover::after {
+	transform: translateX(0.25em);
+}
+
+/* Arrow Left */
+.wp-block-button.is-style-primary-arrow-left .wp-block-button__link::before,
+.wp-block-button.is-style-ghost-arrow-left .wp-block-button__link::before {
+	content: "←";
+	font-size: 1em;
+	line-height: 1;
+	transition: transform 0.15s ease;
+}
+
+.wp-block-button.is-style-primary-arrow-left .wp-block-button__link:hover::before,
+.wp-block-button.is-style-ghost-arrow-left .wp-block-button__link:hover::before {
+	transform: translateX(-0.25em);
+}
+
+
+/* ==========================================================================
+   Navigation Link – Button Styles (supports Dimensions panel)
+   ========================================================================== */
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+
+	/* Dimensions panel overrides these vars when user sets padding */
+	padding:
+		var(--wp--style--padding-top, 0.6em) var(--wp--style--padding-right, 1.333em) var(--wp--style--padding-bottom, 0.6em) var(--wp--style--padding-left, 1.333em);
+
+	border-radius: var(--wp--style--border-radius, 999px);
+	border-width: var(--wp--style--border-width, 1px);
+	border-style: solid;
+	border-color: transparent;
+
+	text-decoration: none;
+	line-height: 1;
+	font-weight: 500;
+	font-feature-settings: "ss01";
+	white-space: nowrap;
+
+	background: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--background) !important;
+
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:hover,
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
+	background: var(--wp--preset--color--action);
+	color: var(--wp--preset--color--background) !important;
+}
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--action);
+	outline-offset: 3px;
+}
+
+/* Outline */
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+
+	padding:
+		var(--wp--style--padding-top, 0.6em) var(--wp--style--padding-right, 1.333em) var(--wp--style--padding-bottom, 0.6em) var(--wp--style--padding-left, 1.333em);
+
+	border-radius: var(--wp--style--border-radius, 999px);
+	border-width: var(--wp--style--border-width, 1px);
+	border-style: solid;
+	border-color: var(--wp--preset--color--border);
+
+	text-decoration: none;
+	line-height: 1;
+	font-weight: 500;
+	font-feature-settings: "ss01";
+	white-space: nowrap;
+
+	background: transparent;
+	color: var(--wp--preset--color--foreground) !important;
+
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:hover,
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:focus-visible {
+	background: var(--wp--preset--color--surface);
+	border-color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--foreground) !important;
+}
+
+.wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:focus-visible {
+	outline: 2px solid var(--wp--preset--color--action);
+	outline-offset: 3px;
+}
+
+
+
+/*
+*
+*
+*/
+/* TRACE: Accordion animation (height-based) */
+/* TRACE: Accordion animation (height-based, premium feel) */
+.wp-block-accordion .wp-block-accordion-panel {
+	height: 0;
+	overflow: clip;
+	opacity: 0;
+	transform: translateY(-6px);
+
+	transition-property: height, opacity, transform;
+	transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	transition-duration: 520ms, 280ms, 280ms;
+	transition-delay: 0ms, 0ms, 0ms;
+
+	will-change: height;
+}
+
+/* Open state (core/accordion toggles .is-open on the item) */
+.wp-block-accordion .wp-block-accordion-item.is-open>.wp-block-accordion-panel {
+	opacity: 1;
+	transform: translateY(0);
+
+	/* height no delay, fade/slide slight delay for a premium feel */
+	transition-delay: 0ms, 60ms, 60ms;
+}
+
+/* Close state: slightly faster + no delays */
+/* .wp-block-accordion .wp-block-accordion-item:not(.is-open) > .wp-block-accordion-panel {
+	transition-duration: 420ms, 220ms, 220ms;
+	transition-delay: 0ms, 0ms, 0ms;
+} */
+
+/* Optional icon rotate */
+.wp-block-accordion .wp-block-accordion-heading__toggle-icon {
+	transition: transform 340ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wp-block-accordion .wp-block-accordion-item.is-open .wp-block-accordion-heading__toggle-icon {
+	/* transform: rotate(45deg); */
+	/* color: red !important; */
+}
+
+.wp-block-accordion .wp-block-accordion-panel {
+	transition-property: height, opacity, transform, padding-top, padding-bottom;
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-block-accordion .wp-block-accordion-panel,
+	.wp-block-accordion .wp-block-accordion-heading__toggle-icon {
+		transition: none !important;
+	}
+}
+
+
+/* ==========================================================================
+   Trace link-style hover underline for core accordion headings
+   Accordion heading: remove default underline and use Trace sliding underline
+   ======================================================================= */
+.wp-block-accordion-item {
+	border-bottom: 1px solid var(--wp--preset--color--border);
+	padding-bottom: .2em;
+}
+
+.wp-block-accordion-panel p {
+	color: var(--wp--preset--color--muted);
+}
+
+.wp-block-accordion-panel p:last-of-type {
+	padding-bottom: 2em;
+}
+
+/* 1) Kill the existing underline coming from hover on the title span */
+.wp-block-accordion .wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title,
+.wp-block-accordion .wp-block-accordion-heading__toggle:focus-visible .wp-block-accordion-heading__toggle-title {
+	text-decoration: none !important;
+}
+
+.wp-block-accordion-heading__toggle-icon {
+	color: var(--wp--preset--color--muted);
+}
+
+
+
+/*  =========================================================================
+	Trace: Semantic Typography Utilities
+	====================================================================== */
+
+/* Display */
+.is-display-xl {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--display-xl);
+	line-height: var(--wp--preset--line-height--display);
+	letter-spacing: var(--wp--preset--letter-spacing--tight);
+	font-weight: 600;
+}
+
+.is-display-l {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--display-l);
+	line-height: var(--wp--preset--line-height--display);
+	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	font-weight: 600;
+}
+
+.is-display-m {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--display-m);
+	line-height: var(--wp--preset--line-height--headings);
+	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	font-weight: 600;
+}
+
+/* Headings */
+.is-heading-xl {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--heading-xl);
+	line-height: var(--wp--preset--line-height--headings);
+	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	font-weight: 600;
+}
+
+.is-heading-l {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--heading-l);
+	line-height: var(--wp--preset--line-height--headings);
+	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	font-weight: 600;
+}
+
+.is-heading-m {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--heading-m);
+	line-height: var(--wp--preset--line-height--headings);
+	letter-spacing: var(--wp--preset--letter-spacing--normal);
+	font-weight: 600;
+}
+
+/* Body */
+.is-body-l {
+	font-family: var(--wp--preset--font-family--google-sans-flex);
+	font-size: var(--wp--preset--font-size--body-l);
+	line-height: var(--wp--preset--line-height--body);
+	font-weight: 400;
+}
+
+.is-body-m {
+	font-family: var(--wp--preset--font-family--google-sans-flex);
+	font-size: var(--wp--preset--font-size--body-m);
+	line-height: var(--wp--preset--line-height--body);
+	font-weight: 400;
+}
+
+.is-body-s {
+	font-family: var(--wp--preset--font-family--google-sans-flex);
+	font-size: var(--wp--preset--font-size--body-s);
+	line-height: var(--wp--preset--line-height--body);
+	font-weight: 400;
+}
+
+/* Meta */
+.is-meta {
+	font-family: var(--wp--preset--font-family--google-sans-flex);
+	font-size: var(--wp--preset--font-size--meta);
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+/* Weight helpers */
+.is-weight-400 {
+	font-weight: 400;
+}
+
+.is-weight-500 {
+	font-weight: 500;
+}
+
+.is-weight-600 {
+	font-weight: 600;
+}
+
+.is-weight-700 {
+	font-weight: 700;
+}
+
+/* Tracking helpers */
+.is-tracking-tight {
+	letter-spacing: var(--wp--preset--letter-spacing--tight);
+}
+
+.is-tracking-slight {
+	letter-spacing: var(--wp--preset--letter-spacing--slight);
+}
+
+.is-tracking-normal {
+	letter-spacing: var(--wp--preset--letter-spacing--normal);
+}
+
+/* Leading helpers */
+.is-leading-display {
+	line-height: var(--wp--preset--line-height--display);
+}
+
+.is-leading-headings {
+	line-height: var(--wp--preset--line-height--headings);
+}
+
+.is-leading-body {
+	line-height: var(--wp--preset--line-height--body);
+}
+
+/* Case helpers */
+.is-uppercase {
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.is-no-underline {
+	text-decoration: none;
+}
+
+.is-underline {
+	text-decoration: underline;
+}
+
+/* Semantic colour helpers */
+/* .is-text-default {
+		color: var(--wp--preset--color--foreground, currentColor);
+	}
+	.is-text-inverse {
+		color: var(--wp--preset--color--background, #ffffff);
+	}
+	.is-muted-text {
+		color: var(--wp--preset--color--muted, #bdbdbd);
+	}
+	.is-subtle-text {
+		color: var(--wp--preset--color--subtle, #999999);
+	} */
+
+
+/* ==========================================================================
+	Navigation Block Styles
+	.site-nav {}
+	Navigation item spacing (select a style in the block “Styles” panel)
+	Responsive nav gaps
+	====================================================================== */
+
+.wp-block-navigation.is-style-nav-gap-s .wp-block-navigation__container {
+	gap: clamp(0.5rem, 1.2vw, 1rem);
+}
+
+.wp-block-navigation.is-style-nav-gap-m .wp-block-navigation__container {
+	gap: clamp(0.75rem, 2vw, 2.4rem);
+}
+
+.wp-block-navigation.is-style-nav-gap-l .wp-block-navigation__container {
+	gap: clamp(1rem, 3vw, 4.4rem);
+}
+
+
+/*  =========================================================================
+	Pattern Overrides (when you start building patterns)
+	Use pattern wrapper classes as hooks, e.g.:
+	.pattern-hero {}
+	.pattern-feature-grid {}
+	.pattern-footer-cta {}
+	====================================================================== */
+/* Latest Posts: list-item rhythm (style variations) */
+.wp-block-latest-posts.is-style-tight li {
+	margin-block: 0;
+}
+
+.wp-block-latest-posts.is-style-comfortable li {
+	margin-block: var(--wp--preset--spacing--xs);
+}
+
+.wp-block-latest-posts.is-style-spacious li {
+	margin-block: var(--wp--preset--spacing--s);
+}
+
+/* “Cards” option: padding for tap targets + separated items */
+.wp-block-latest-posts.is-style-cards {
+	list-style: none;
+	padding-left: 0;
+}
+
+.wp-block-latest-posts.is-style-cards li {
+	padding: var(--wp--preset--spacing--s);
+	margin-block: var(--wp--preset--spacing--xs);
+	border: 1px solid currentColor;
+	border-radius: 0.75rem;
+}
+
+
+
+
+/* ==========================================================================
+   Group variation: Team Member
+   ========================================================================== 
+
+.wp-block-group.is-style-team-member{
+	position: relative;
+	overflow: hidden;
+}
+
+/* Image block at top 
+.wp-block-group.is-style-team-member .wp-block-image{
+	margin: 0;
+}
+
+.wp-block-group.is-style-team-member .wp-block-image img{
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 0.6rem;
+}
+
+/* Name 
+.wp-block-group.is-style-team-member :where(h1,h2,h3,h4){
+	margin-top: var(--wp--preset--spacing--s);
+	margin-bottom: 0.15em;
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	line-height: var(--wp--preset--line-height--headings);
+}
+
+/* Role / title (first paragraph usually) 
+.wp-block-group.is-style-team-member :where(p){
+	margin-top: 0.25em;
+	margin-bottom: var(--wp--preset--spacing--s);
+	color: var(--wp--preset--color--muted);
+}
+
+/* Social links 
+.wp-block-group.is-style-team-member .wp-block-social-links{
+	margin-top: var(--wp--preset--spacing--s);
+	gap: 0.5rem;
+}
+
+.wp-block-group.is-style-team-member .wp-social-link{
+	border-radius: 999px;
+	background: transparent;
+	border: 1px solid var(--wp--preset--color--border);
+}
+
+.wp-block-group.is-style-team-member .wp-social-link a{
+	padding: 0.5rem;
+}
+*/
+
+
+
+
+
+
+/*  =========================================================================
+	TRACE: Query Loop Carousel (horizontal scroll)
+	====================================================================== */
+
+.trace-carousel {
+	--trace-gap: var(--wp--style--block-gap, var(--wp--style--unstable-block-gap, 16px));
+}
+
+/* TRACE: Query Loop carousel (single row) */
+.trace-carousel .wp-block-post-template.is-layout-grid {
+	display: flex !important;
+	flex-wrap: nowrap !important;
+
+	gap: var(--trace-gap);
+
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	scroll-padding-inline: var(--trace-gap);
+
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 0.5rem;
+}
+
+/* Each post becomes a "slide" */
+.trace-carousel .wp-block-post-template>li.wp-block-post {
+	flex: 0 0 auto;
+	width: clamp(240px, 28vw, 420px);
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	min-width: 0;
+}
+
+/* Prevent images from stretching oddly */
+.trace-carousel .wp-block-post-featured-image,
+.trace-carousel .wp-block-post-featured-image img {
+	display: block;
+}
+
+/* Hide scrollbar */
+.trace-carousel .wp-block-post-template {
+	scrollbar-width: none;
+}
+
+.trace-carousel .wp-block-post-template::-webkit-scrollbar {
+	display: none;
+}
+
+
+/* Add Fades: Enable this if you want gradient fades on the left and right */
+/* .trace-carousel .wp-block-post-template {
+		-webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 98%, transparent);
+		mask-image: linear-gradient(to right, transparent, #000 6%, #000 98%, transparent);
+	} */
+
+.scroll-nudge {
+	will-change: transform;
+	transform: translateX(0);
+	transition: transform 0.1s linear, opacity 0.2s ease;
+}
+
+/* Mobile: one card per view */
+@media (max-width: 781px) {
+	.trace-carousel .wp-block-post-template>li.wp-block-post {
+		width: 100%;
+	}
+
+	.trace-carousel .wp-block-post-template.is-layout-grid {
+		padding-inline: var(--trace-gap);
+		scroll-padding-inline: var(--trace-gap);
+	}
+}
+
+/* Tablet+ / Desktop: multiple cards visible */
+@media (min-width: 782px) {
+	.trace-carousel .wp-block-post-template>li.wp-block-post {
+		width: clamp(260px, 28vw, 420px);
+	}
+}
+
+
+
+
+
+
+
+
+
+/*  =========================================================================
+	Trace Pricing Badges
+	- Editor Access
+	- Animations
+	====================================================================== */
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	color: var(--wp--preset--color--foreground);
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+
+	position: absolute;
+	right: -10px;
+	bottom: 50px;
+	animation: spin 7s linear infinite;
+	/* Optional: For text that might wrap */
+	overflow: hidden;
+}
+
+
+/* ==========================================================================
+	TRACE: Forms + Inputs (core blocks + common plugins)
+	- Low-specificity, token-driven, editor-safe
+	====================================================================== */
+
+:root {
+	/* Field tokens (safe fallbacks to WP presets) */
+	--trace-field-bg: var(--wp--preset--color--background, transparent);
+	--trace-field-text: var(--wp--preset--color--foreground, currentColor);
+	--trace-field-border: color-mix(in srgb, var(--wp--preset--color--foreground, currentColor) 22%, transparent);
+	--trace-field-border-hover: color-mix(in srgb, var(--wp--preset--color--foreground, currentColor) 35%, transparent);
+	--trace-field-focus: var(--wp--preset--color--action, currentColor);
+	--trace-field-error: var(--wp--preset--color--danger, currentColor);
+
+	--trace-field-radius: 0.75rem;
+	--trace-field-pad-y: 0.75rem;
+	--trace-field-pad-x: 0.9rem;
+
+	--trace-field-font-size: var(--wp--preset--font-size--body-m);
+	--trace-field-line-height: 1.35;
+
+	--trace-field-shadow-focus: 0 0 0 3px color-mix(in srgb, var(--trace-field-focus) 30%, transparent);
+}
+
+/* Scope to front-end + editor while staying low-specificity */
+:where(.wp-site-blocks, .editor-styles-wrapper) {
+
+	/* ---------- Base form layout ---------- */
+
+	:where(form) {
+		display: block;
+	}
+
+	:where(label) {
+		display: inline-block;
+		width: 100%;
+		font-weight: 400;
+		line-height: 1.2;
+		margin: 0 0 0.35rem;
+	}
+
+	:where(fieldset) {
+		border: 1px solid var(--trace-field-border);
+		border-radius: var(--trace-field-radius);
+		padding: 1rem;
+		margin: 0;
+		min-width: 0;
+	}
+
+	:where(legend) {
+		padding: 0 0.5rem;
+		font-weight: 700;
+	}
+
+	:where(.required, .is-required) {
+		color: var(--trace-field-focus);
+	}
+
+	/* ---------- Text-like inputs ---------- */
+
+	:where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		input[type="date"],
+		input[type="datetime-local"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		textarea,
+		select) {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+
+		background: var(--trace-field-bg);
+		color: var(--trace-field-text);
+		border: 1px solid var(--trace-field-border);
+		border-radius: var(--trace-field-radius);
+
+		padding: var(--trace-field-pad-y) var(--trace-field-pad-x);
+		font: inherit;
+		font-size: var(--trace-field-font-size);
+		line-height: var(--trace-field-line-height);
+
+		min-height: calc((var(--trace-field-pad-y) * 2) + (1em * var(--trace-field-line-height)));
+		transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+	}
+
+	:where(textarea) {
+		min-height: 9rem;
+		resize: vertical;
+	}
+
+	:where(select) {
+		padding-right: 2.4rem;
+		background-image:
+			linear-gradient(45deg, transparent 50%, currentColor 50%),
+			linear-gradient(135deg, currentColor 50%, transparent 50%);
+		background-position:
+			calc(100% - 1.15rem) 55%,
+			calc(100% - 0.9rem) 55%;
+		background-size:
+			0.35rem 0.35rem,
+			0.35rem 0.35rem;
+		background-repeat: no-repeat;
+	}
+
+	/* Hover + focus */
+	:where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		input[type="date"],
+		input[type="datetime-local"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		textarea,
+		select):where(:hover) {
+		border-color: var(--trace-field-border-hover);
+	}
+
+	:where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		input[type="date"],
+		input[type="datetime-local"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		textarea,
+		select):where(:focus, :focus-visible) {
+		outline: none;
+		border-color: var(--trace-field-focus);
+		box-shadow: var(--trace-field-shadow-focus);
+	}
+
+	:where(input::placeholder, textarea::placeholder) {
+		color: color-mix(in srgb, var(--trace-field-text) 55%, transparent);
+		opacity: 1;
+	}
+
+	/* Disabled + readonly */
+	:where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		input[type="date"],
+		input[type="datetime-local"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		textarea,
+		select,
+		button):where(:disabled, [aria-disabled="true"]) {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	:where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		input[type="date"],
+		input[type="datetime-local"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		textarea)[readonly] {
+		opacity: 0.85;
+	}
+
+	/* ---------- Submit ---------- */
+
+	:where(input[type=button], input[type=submit], input[type=reset], input[type=file]) {
+		cursor: pointer;
+	}
+
+	/* Make focus look intentional (keyboard accessibility) */
+	:where(input[type=button]:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible),
+	input[type=file]:focus-visible {
+		outline: 2px solid var(--wp--preset--color--action);
+		outline-offset: 3px;
+	}
+
+	:where(input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=reset]:hover) {
+		background: var(--wp--preset--color--surface);
+		color: var(--wp--preset--color--foreground);
+	}
+
+
+
+	/* Submit buttons inside card-style groups */
+	:where(.is-style-card):where(.wpcf7):where(input[type="button"].wpcf7-submit):hover,
+	:where(.is-style-card):where(.wpcf7):where(input[type="submit"].wpcf7-submit):hover {
+		background-color: var(--wp--preset--color--background);
+	}
+
+
+	/* ---------- Checkboxes + radios ---------- */
+
+	:where(input[type="checkbox"], input[type="radio"]) {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 1.15em;
+		height: 1.15em;
+		margin: 0;
+		vertical-align: -0.2em;
+
+		border: 1px solid var(--trace-field-border);
+		background: var(--trace-field-bg);
+		display: inline-grid;
+		place-content: center;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+	}
+
+	:where(input[type="checkbox"]) {
+		border-radius: 0.3em;
+	}
+
+	:where(input[type="radio"]) {
+		border-radius: 999px;
+	}
+
+	:where(input[type="checkbox"]):where(:focus, :focus-visible),
+	:where(input[type="radio"]):where(:focus, :focus-visible) {
+		outline: none;
+		border-color: var(--trace-field-focus);
+		box-shadow: var(--trace-field-shadow-focus);
+	}
+
+	:where(input[type="checkbox"]):checked {
+		background: var(--trace-field-focus);
+		border-color: var(--trace-field-focus);
+	}
+
+	:where(input[type="checkbox"]):checked::before {
+		content: "";
+		width: 0.55em;
+		height: 0.3em;
+		border-left: 2px solid color-mix(in srgb, var(--trace-field-bg) 85%, white);
+		border-bottom: 2px solid color-mix(in srgb, var(--trace-field-bg) 85%, white);
+		transform: rotate(-45deg);
+		margin-top: -0.05em;
+	}
+
+	:where(input[type="radio"]):checked {
+		border-color: var(--trace-field-focus);
+	}
+
+	:where(input[type="radio"]):checked::before {
+		content: "";
+		width: 0.55em;
+		height: 0.55em;
+		border-radius: 999px;
+		background: var(--trace-field-focus);
+	}
+
+	/* Common “label next to control” patterns */
+	:where(.wpforms-field-checkbox, .wpforms-field-radio, .wpcf7-list-item, .gfield_checkbox, .gfield_radio) :where(label) {
+		font-weight: 400;
+		margin: 0;
+	}
+
+	/* Common “Inputs" inside label pattern */
+
+	:where(label span) {
+		display: block;
+		margin-top: 0.6rem;
+	}
+
+	/* ---------- Buttons inside forms ---------- */
+
+	:where(form) :where(button, input[type="submit"], input[type="button"], input[type="reset"]) {
+		font: inherit;
+		border-radius: calc(var(--trace-field-radius) * 0.9);
+	}
+
+	/* Ensure form buttons don’t look “off” */
+	:where(form) :where(button, input[type="submit"]) {
+		min-height: 2.6rem;
+	}
+
+	/* ---------- Helper text, errors, success ---------- */
+
+	:where(.description, .help, .helper-text, .wpforms-field-description, .gfield_description, .wpcf7-not-valid-tip) {
+		font-size: var(--wp--preset--font-size--small, 0.925rem);
+		line-height: 1.4;
+		opacity: 0.8;
+		margin-top: 0.35rem;
+	}
+
+	/* HTML5 invalid */
+	:where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		textarea,
+		select):invalid {
+		/* border-color: color-mix(in srgb, #ff3b30 55%, var(--trace-field-border)); */
+	}
+
+	/* Plugin error classes (CF7, WPForms, Gravity) */
+	:where(.wpcf7-not-valid, .wpforms-error, .gfield_error) :where(input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="search"],
+		input[type="password"],
+		input[type="number"],
+		textarea,
+		select) {
+		border-color: var(--trace-field-error);
+		box-shadow: 0 0 0 3px var(--trace-field-error);
+		;
+	}
+
+	:where(.wpcf7-response-output, .wpforms-confirmation-container-full, .gform_confirmation_message) {
+		border: 1px solid var(--trace-field-border);
+		border-radius: var(--trace-field-radius);
+		padding: 0.9rem 1rem;
+		margin-top: 1rem;
+	}
+
+	/* ---------- WordPress core blocks ---------- */
+
+	/* Core Search block */
+	:where(.wp-block-search__inside-wrapper) {
+		gap: 0.75rem;
+	}
+
+	:where(.wp-block-search__input) {
+		border-radius: var(--trace-field-radius);
+	}
+
+	/* Comments form */
+	:where(.comment-form) :where(p) {
+		margin: 0 0 1rem;
+	}
+
+	:where(.comment-form) :where(.comment-form-cookies-consent) {
+		display: flex;
+		gap: 0.6rem;
+		align-items: flex-start;
+	}
+
+	:where(.comment-form) :where(.comment-form-cookies-consent) :where(label) {
+		margin: 0;
+		font-weight: 400;
+		opacity: 0.9;
+	}
+
+	/* ---------- Better spacing for common plugins ---------- */
+
+	:where(.wpforms-container, .wpcf7, .gform_wrapper) {
+		max-width: 100%;
+	}
+
+	:where(.wpforms-field, .wpcf7-form-control-wrap, .gfield) {
+		margin-bottom: 1rem;
+	}
+
+	:where(.wpforms-field-row, .gform_fields) {
+		gap: 1rem;
+	}
+
+	/* Stop plugin inputs from shrinking inside flex/columns */
+	:where(.wpforms-container, .wpcf7, .gform_wrapper) :where(input, textarea, select) {
+		min-width: 0;
+	}
+
+	/* ---------- Small-screen comfort ---------- */
+
+	@media (max-width: 600px) {
+
+		:where(input[type="text"],
+			input[type="email"],
+			input[type="url"],
+			input[type="tel"],
+			input[type="search"],
+			input[type="password"],
+			input[type="number"],
+			input[type="date"],
+			input[type="datetime-local"],
+			textarea,
+			select) {
+			/* Helps iOS avoid “zoom on focus” if your base font ever dips below 16px */
+			font-size: max(1rem, var(--trace-field-font-size));
+		}
+	}
+}
+
+
+/* ==========================================================================
+	TRACE: CF7 native controls (file)
+	WPForms
+	- Makes OS-styled controls match Trace
+	======================================================================= */
+
+input[type=file] {
+	padding: 0 0 0 0;
+}
+
+:where(.wp-site-blocks, .editor-styles-wrapper) {
+
+	/* ---------- File input ---------- */
+	/* Base field look */
+	:where(input[type="file"].wpcf7-file) {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+
+		background: var(--trace-field-bg);
+		color: var(--trace-field-text);
+
+		border: 1px solid var(--trace-field-border);
+		border-radius: var(--trace-field-radius);
+		padding: calc(var(--trace-field-pad-y) * 0.75) var(--trace-field-pad-x);
+
+		font: inherit;
+		font-size: var(--trace-field-font-size);
+		line-height: var(--trace-field-line-height);
+
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	:where(input[type="file"].wpcf7-file:hover) {
+		border-color: var(--trace-field-border-hover);
+	}
+
+	:where(input[type="file"].wpcf7-file:focus, input[type="file"].wpcf7-file:focus-visible) {
+		outline: none;
+		border-color: var(--trace-field-focus);
+		box-shadow: var(--trace-field-shadow-focus);
+	}
+
+	/* The “Choose file” button (modern browsers) */
+	:where(input[type="file"].wpcf7-file)::file-selector-button {
+		font: inherit;
+		font-weight: 400;
+
+		padding: calc(var(--trace-field-pad-y) * 0.7) calc(var(--trace-field-pad-x) * 0.9);
+		margin-right: 0.75rem;
+
+		border-radius: calc(var(--trace-field-radius) * 0.85);
+		border: 1px solid var(--trace-field-border);
+
+		background: color-mix(in srgb, var(--trace-field-text) 6%, transparent);
+		color: var(--trace-field-text);
+
+		cursor: pointer;
+		transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.05s ease;
+	}
+
+	:where(input[type="file"].wpcf7-file)::file-selector-button:hover {
+		border-color: var(--trace-field-border-hover);
+		background: color-mix(in srgb, var(--trace-field-text) 10%, transparent);
+	}
+
+	:where(input[type="file"].wpcf7-file)::file-selector-button:active {
+		transform: translateY(1px);
+	}
+
+	/* Safari / older Chromium */
+	:where(input[type="file"].wpcf7-file)::-webkit-file-upload-button {
+		font: inherit;
+		font-weight: 400;
+
+		padding: calc(var(--trace-field-pad-y) * 0.7) calc(var(--trace-field-pad-x) * 0.9);
+		margin-right: 0.75rem;
+
+		border-radius: calc(var(--trace-field-radius) * 0.85);
+		border: 1px solid var(--trace-field-border);
+
+		background: color-mix(in srgb, var(--trace-field-text) 6%, transparent);
+		color: var(--trace-field-text);
+
+		cursor: pointer;
+		transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.05s ease;
+	}
+
+	:where(input[type="file"].wpcf7-file)::-webkit-file-upload-button:hover {
+		border-color: var(--trace-field-border-hover);
+		background: color-mix(in srgb, var(--trace-field-text) 10%, transparent);
+	}
+
+	:where(input[type="file"].wpcf7-file)::-webkit-file-upload-button:active {
+		transform: translateY(1px);
+	}
+
+}
+
+
+.wpforms-required-label {
+	display: inline;
+}
+
+
+
+/* ==========================================================================
+   TRACE: Parallax Image (opt-in)
+   ========================================================================== */
+
+.is-style-trace-parallax {
+	position: relative;
+	overflow: hidden;
+}
+
+.wp-block-image.is-style-trace-parallax {
+	position: relative;
+	overflow: hidden;
+}
+
+.wp-block-image.is-style-trace-parallax img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: inherit;
+	transform: translate3d(0, var(--trace-parallax-y, 0px), 0) scale(1.12);
+	will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-image.is-style-trace-parallax img {
+		transform: none !important;
+		will-change: auto;
+	}
+}
+
+/* ==========================================================================
+   CORE IMAGE: Rounded block style support
+   ========================================================================== */
+
+.wp-block-image.is-style-rounded {
+	border-radius: 999px;
+	overflow: hidden;
+}
+
+.wp-block-image.is-style-rounded img {
+	border-radius: 999px;
+}
+
+/* ==========================================================================
+   TRACE: Parallax Cover (opt-in)
+   ========================================================================== */
+
+.wp-block-cover.is-style-trace-parallax {
+	position: relative;
+	overflow: hidden;
+}
+
+.wp-block-cover.is-style-trace-parallax .wp-block-cover__image-background,
+.wp-block-cover.is-style-trace-parallax video.wp-block-cover__video-background {
+	transform: translate3d(0, var(--trace-parallax-y, 0px), 0) scale(1.12);
+	will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-block-cover.is-style-trace-parallax .wp-block-cover__image-background,
+	.wp-block-cover.is-style-trace-parallax video.wp-block-cover__video-background {
+		transform: none !important;
+		will-change: auto;
+	}
+}
+
+
+
+
+.wp-block-media-text__media {
+	overflow: hidden;
+	border-radius: inherit;
+}
+
+
+
+
+
+
+/* ==========================================================================
+	TRACE MEDIA & TEXT
+	Add to:
+	/assets/css/trace-media-text.css
+	and load on the front end too.
+========================================================================== */
+
+.wp-block-media-text {
+	--trace-media-radius: 1.25rem;
+	--trace-media-bleed: clamp(1rem, 4vw, 4rem);
+	--trace-content-max: 42rem;
+}
+
+.wp-block-media-text__media {
+	height: 100%;
+	overflow: hidden;
+}
+
+.wp-block-media-text__media img,
+.wp-block-media-text__media video {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+	RATIO STYLES
+-------------------------------------------------------------------------- */
+
+.wp-block-media-text.is-style-ratio-1-1 .wp-block-media-text__media {
+	aspect-ratio: 1 / 1;
+}
+
+.wp-block-media-text.is-style-ratio-4-3 .wp-block-media-text__media {
+	aspect-ratio: 4 / 3;
+}
+
+.wp-block-media-text.is-style-ratio-3-2 .wp-block-media-text__media {
+	aspect-ratio: 3 / 2;
+}
+
+.wp-block-media-text.is-style-ratio-16-9 .wp-block-media-text__media {
+	aspect-ratio: 16 / 9;
+}
+
+.wp-block-media-text.is-style-ratio-9-16 .wp-block-media-text__media {
+	aspect-ratio: 9 / 16;
+}
+
+/* --------------------------------------------------------------------------
+	ROUNDED MEDIA
+	Uses the block radius if set in the editor, otherwise falls back.
+-------------------------------------------------------------------------- */
+
+.wp-block-media-text.is-style-media-rounded .wp-block-media-text__media {
+	border-radius: inherit;
+}
+
+.wp-block-media-text.is-style-media-rounded .wp-block-media-text__media img,
+.wp-block-media-text.is-style-media-rounded .wp-block-media-text__media video {
+	border-radius: inherit;
+}
+
+.wp-block-media-text.is-style-media-rounded:not([style*="border-radius"]) {
+	border-radius: var(--trace-media-radius);
+}
+
+/* --------------------------------------------------------------------------
+	CONTENT ALIGNMENT
+-------------------------------------------------------------------------- */
+
+/* .wp-block-media-text.is-style-content-centered .wp-block-media-text__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wp-block-media-text.is-style-content-bottom .wp-block-media-text__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.wp-block-media-text .wp-block-media-text__content > * {
+	max-width: var(--trace-content-max);
+} */
+.wp-block-media-text>.wp-block-media-text__content {
+	padding: 0 0 0 8%;
+	/* word-break:break-word */
+	/* background-color: blue; */
+}
+
+.wp-block-media-text.has-media-on-the-right>.wp-block-media-text__content {
+	padding: 0 8% 0 0;
+	/* word-break:break-word */
+	/* background-color: red; */
+}
+
+.wp-block-media-text>.wp-block-media-text__content {
+	/* padding: 0 8%; */
+	/* word-break:break-word */
+	/* background-color: red; */
+}
+
+/* --------------------------------------------------------------------------
+	IMAGE BLEED
+-------------------------------------------------------------------------- */
+
+.wp-block-media-text.is-style-image-bleed-left,
+.wp-block-media-text.is-style-image-bleed-right {
+	overflow: visible;
+}
+
+.wp-block-media-text.is-style-image-bleed-left .wp-block-media-text__media {
+	margin-left: calc(var(--trace-media-bleed) * -1);
+}
+
+.wp-block-media-text.is-style-image-bleed-right .wp-block-media-text__media {
+	margin-right: calc(var(--trace-media-bleed) * -1);
+}
+
+/* Prevent bleed on narrow screens */
+@media (max-width: 781px) {
+
+	.wp-block-media-text.is-style-image-bleed-left .wp-block-media-text__media,
+	.wp-block-media-text.is-style-image-bleed-right .wp-block-media-text__media {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+
+/* --------------------------------------------------------------------------
+	STACK REVERSE
+	Useful for mobile-first premium layouts.
+-------------------------------------------------------------------------- */
+
+@media (max-width: 781px) {
+	.wp-block-media-text.is-style-stack-reverse {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+/* --------------------------------------------------------------------------
+	POLISH
+-------------------------------------------------------------------------- */
+
+.wp-block-media-text.is-style-media-rounded .wp-block-media-text__media,
+.wp-block-media-text.is-style-ratio-1-1 .wp-block-media-text__media,
+.wp-block-media-text.is-style-ratio-4-3 .wp-block-media-text__media,
+.wp-block-media-text.is-style-ratio-3-2 .wp-block-media-text__media,
+.wp-block-media-text.is-style-ratio-16-9 .wp-block-media-text__media,
+.wp-block-media-text.is-style-ratio-9-16 .wp-block-media-text__media {
+	box-sizing: border-box;
+}
+
+.wp-block-media-text.has-media-on-the-right.is-style-image-bleed-right .wp-block-media-text__content,
+.wp-block-media-text:not(.has-media-on-the-right).is-style-image-bleed-left .wp-block-media-text__content {
+	position: relative;
+	z-index: 2;
+}

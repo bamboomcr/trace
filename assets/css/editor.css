@@ -1,0 +1,32 @@
+/*	==========================================================================
+	TRACE FEATURED REVEAL
+	EDITOR ONLY: show the featured image as a small preview
+	======================================================================= */
+
+	.editor-styles-wrapper
+	.trace-featured-reveal
+	.wp-block-post-featured-image {
+		display: block;
+		max-width: 160px; /* match hover preview size */
+		margin-top: 12px;
+	}
+
+	.editor-styles-wrapper
+	.trace-featured-reveal
+	.wp-block-post-featured-image img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+
+
+/*	==========================================================================
+	Trace: Scroll CTA (marquee + swapping gallery)
+	- Simplified to make editing easier
+	======================================================================= */
+
+	.trace-scroll-cta .wp-block-gallery {
+		max-width: 200px !important;
+	}
