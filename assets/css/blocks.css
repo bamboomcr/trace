@@ -28,6 +28,17 @@
 	position: relative;
 }
 
+/* Keep the logo column visible above the mobile nav overlay.
+   WordPress makes .wp-block-navigation__responsive-container position:fixed
+   when the menu opens, covering the full viewport including the logo.
+   The header already creates a stacking context (z-index: 1000), so giving
+   the logo column a higher z-index than the overlay keeps it on top.
+   :has() means this only applies when the menu is actually open. */
+.site-header:has(.wp-block-navigation__responsive-container.is-menu-open) .wp-block-column:first-child {
+	position: relative;
+	z-index: 99999;
+}
+
 /*  =========================================================================
 	TRACE: Make fixed header work even with wp-block-template-part wrapper
     ====================================================================== */
