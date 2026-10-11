@@ -1085,7 +1085,7 @@ input[type=file] {
 	--trace-field-focus: var(--wp--preset--color--action, currentColor);
 	--trace-field-error: var(--wp--preset--color--danger, currentColor);
 
-	--trace-field-radius: 0.75rem;
+	--trace-field-radius: 0;
 	--trace-field-pad-y: 0.75rem;
 	--trace-field-pad-x: 0.9rem;
 
