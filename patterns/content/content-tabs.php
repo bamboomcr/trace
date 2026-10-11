@@ -77,7 +77,7 @@
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:image {"sizeSlug":"large"} -->
 					<figure class="wp-block-image size-large">
-						<img src="https://via.placeholder.com/900x700" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-default.png' ) ); ?>" alt="" />
 					</figure>
 					<!-- /wp:image -->
 				</div>
@@ -110,7 +110,7 @@
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:image {"sizeSlug":"large"} -->
 					<figure class="wp-block-image size-large">
-						<img src="https://via.placeholder.com/900x700" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-default.png' ) ); ?>" alt="" />
 					</figure>
 					<!-- /wp:image -->
 				</div>
@@ -143,7 +143,7 @@
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:image {"sizeSlug":"large"} -->
 					<figure class="wp-block-image size-large">
-						<img src="https://via.placeholder.com/900x700" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-default.png' ) ); ?>" alt="" />
 					</figure>
 					<!-- /wp:image -->
 				</div>
@@ -176,7 +176,7 @@
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:image {"sizeSlug":"large"} -->
 					<figure class="wp-block-image size-large">
-						<img src="https://via.placeholder.com/900x700" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-default.png' ) ); ?>" alt="" />
 					</figure>
 					<!-- /wp:image -->
 				</div>

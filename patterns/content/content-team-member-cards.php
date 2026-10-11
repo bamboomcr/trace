@@ -30,11 +30,11 @@
 			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:social-links {"iconColor":"background","iconColorValue":"#131315","iconBackgroundColor":"foreground","iconBackgroundColorValue":"#f0efeb","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
 			<ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color is-style-default">
-				<!-- wp:social-link {"url":"https://x.com/solo_themes","service":"x"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/contact/","service":"email"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://x.com","service":"x"} /-->
+				<!-- wp:social-link {"url":"mailto:hello@example.com","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com","service":"linkedin"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 
@@ -62,11 +62,11 @@
 			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:social-links {"iconColor":"background","iconColorValue":"#131315","iconBackgroundColor":"foreground","iconBackgroundColorValue":"#f0efeb","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
 			<ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color is-style-default">
-				<!-- wp:social-link {"url":"https://x.com/solo_themes","service":"x"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/contact/","service":"email"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://x.com","service":"x"} /-->
+				<!-- wp:social-link {"url":"mailto:hello@example.com","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com","service":"linkedin"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 
@@ -94,11 +94,11 @@
 			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:social-links {"iconColor":"background","iconColorValue":"#131315","iconBackgroundColor":"foreground","iconBackgroundColorValue":"#f0efeb","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
 			<ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color is-style-default">
-				<!-- wp:social-link {"url":"https://x.com/solo_themes","service":"x"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/contact/","service":"email"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://x.com","service":"x"} /-->
+				<!-- wp:social-link {"url":"mailto:hello@example.com","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com","service":"linkedin"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 
@@ -126,11 +126,11 @@
 			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:social-links {"iconColor":"background","iconColorValue":"#131315","iconBackgroundColor":"foreground","iconBackgroundColorValue":"#f0efeb","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
 			<ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color is-style-default">
-				<!-- wp:social-link {"url":"https://x.com/solo_themes","service":"x"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/contact/","service":"email"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://x.com","service":"x"} /-->
+				<!-- wp:social-link {"url":"mailto:hello@example.com","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com","service":"linkedin"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 
@@ -158,11 +158,11 @@
 			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:social-links {"iconColor":"background","iconColorValue":"#131315","iconBackgroundColor":"foreground","iconBackgroundColorValue":"#f0efeb","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
 			<ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color is-style-default">
-				<!-- wp:social-link {"url":"https://x.com/solo_themes","service":"x"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/contact/","service":"email"} /-->
-				<!-- wp:social-link {"url":"https://solothemes.com/","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://x.com","service":"x"} /-->
+				<!-- wp:social-link {"url":"mailto:hello@example.com","service":"mail"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com","service":"linkedin"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 

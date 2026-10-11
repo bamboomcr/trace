@@ -28,7 +28,7 @@
 <p class="has-body-l-font-size">Follow us!</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:social-links {"iconColor":"background","iconColorValue":"#131315","iconBackgroundColor":"foreground","iconBackgroundColorValue":"#f0efeb","size":"has-normal-icon-size","layout":{"type":"flex","justifyContent":"left"}} -->
+<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","layout":{"type":"flex","justifyContent":"left"}} -->
 <ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color"><!-- wp:social-link {"url":"https://www.linkedin.com","service":"linkedin"} /-->
 
 <!-- wp:social-link {"url":"https://www.google.com","service":"google"} /-->
