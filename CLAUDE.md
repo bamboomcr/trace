@@ -24,10 +24,8 @@ Treat the core as boring infrastructure. If a change feels subjective,
 decorative, or brand-led, it belongs in a branch.
 
 For full theme philosophy: `docs/theme-contract.md`. For color scheme rules:
-`docs/color-schemes.md`. Note: at time of writing, `theme-contract.md`
-predates the schema work and references "11 slugs"; the live schema is now 12
-(see Color System below). `color-schemes.md` will be updated alongside any
-schema change.
+`docs/color-schemes.md`. Both describe the 12-slug schema; update them
+alongside any schema change.
 
 ## File layout
 

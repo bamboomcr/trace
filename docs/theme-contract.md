@@ -154,23 +154,30 @@ Default heading sizes wired in `theme.json`:
 - h1 → `heading-xl`, h2 → `heading-l`, h3 → `heading-m`
 - h4 → `l`, h5 → `m`, h6 → `s`
 
-### 4.4 Line Height Presets
+### 4.4 Line Height Tokens
 
-| Slug       | Name     | Value |
-|------------|----------|-------|
-| `display`  | Display  | `1`   |
-| `headings` | Headings | `1.2` |
-| `body`     | Body     | `1.6` |
+`theme.json` has no preset support for line height, so these live under
+`settings.custom.lineHeight` and are referenced as
+`var(--wp--custom--line-height--SLUG)`.
 
-Custom line height is disabled in the editor — use these presets.
+| Slug       | Value |
+|------------|-------|
+| `display`  | `1`   |
+| `headings` | `1.2` |
+| `body`     | `1.6` |
 
-### 4.5 Letter Spacing Presets
+Custom line height is disabled in the editor — use these tokens.
 
-| Slug     | Name   | Value      |
-|----------|--------|------------|
-| `tight`  | Tight  | `-0.04em`  |
-| `slight` | Slight | `-0.02em`  |
-| `normal` | Normal | `0em`      |
+### 4.5 Letter Spacing Tokens
+
+Defined under `settings.custom.letterSpacing`, referenced as
+`var(--wp--custom--letter-spacing--SLUG)`.
+
+| Slug     | Value      |
+|----------|------------|
+| `tight`  | `-0.04em`  |
+| `slight` | `-0.02em`  |
+| `normal` | `0em`      |
 
 Headings default to `slight`. Buttons default to `normal`.
 
