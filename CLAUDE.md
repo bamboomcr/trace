@@ -152,7 +152,7 @@ and the default arrow glyph returns. Safe by default.
 
 ## Patterns
 
-36 patterns under `patterns/`, each:
+37 patterns under `patterns/`, each:
 
 - Has a `metadata.name` on the top-level block for editor List View identity
 - References colors by slug only, never hex

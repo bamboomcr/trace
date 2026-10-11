@@ -17,7 +17,7 @@ Trace is a block theme (Full Site Editing) built around the idea that the words 
 * A twelve-slug colour system with four schemes (Black, Light, Harbor, Citron). Switch in Site Editor → Styles → Browse styles.
 * Three headers (static, fixed, smart) and three footers.
 * A library of section patterns: heroes, calls to action, feature grids, pricing, team, testimonials, FAQ, tabs and post lists.
-* Prebuilt pages (Home, About, Services, Pricing, FAQ, Journal, Contact) offered when you add a new page.
+* Prebuilt pages (Home, Work, About, Services, Journal, Contact, Style Guide) offered when you add a new page.
 * A "Blank (hero-led)" template for posts and pages that bring their own hero and heading.
 
 == Getting started ==
