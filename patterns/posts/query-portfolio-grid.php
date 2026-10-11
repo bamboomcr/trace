@@ -1,16 +1,16 @@
 <?php
 /**
- * Title: Portfolio Grid (Animated)
- * Slug: trace/query-portfolio-grid-animated
- * Categories: trace-query
- * Keywords: portfolio, query, grid, animated
+ * Title: Posts — Portfolio Grid
+ * Slug: trace/query-portfolio-grid
+ * Categories: trace-posts
+ * Keywords: portfolio, query, grid
  * Viewport Width: 1400
  */
 ?>
 
-<!-- wp:query {"queryId":31,"query":{"perPage":9,"postType":"post","order":"desc","orderBy":"date","inherit":false},"metadata":{"categories":["trace-query"],"patternName":"trace/query-portfolio-grid-animated","name":"Portfolio Grid (Animated)"}} -->
+<!-- wp:query {"queryId":31,"query":{"perPage":9,"postType":"post","order":"desc","orderBy":"date","inherit":false},"metadata":{"categories":["trace-posts"],"patternName":"trace/query-portfolio-grid","name":"Portfolio Grid"}} -->
  
-<div class="wp-block-query trace-reveal">
+<div class="wp-block-query">
 	<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 		<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/4"} /-->
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->

@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Editorial List (Hover Preview)
+ * Title: Posts — Editorial List (Hover Preview)
  * Slug: trace/query-editorial-list-animated
- * Categories: trace-query
+ * Categories: trace-posts
  * Keywords: query, list, editorial, hover, preview
  * Viewport Width: 1400
  */
 ?>
 
-<!-- wp:query {"queryId":32,"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date","inherit":false,"offset":0},"metadata":{"categories":["trace-query"],"patternName":"trace/query-editorial-list-animated","name":"Editorial List (Hover Preview)"},"className":"trace-featured-reveal"} -->
+<!-- wp:query {"queryId":32,"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date","inherit":false,"offset":0},"metadata":{"categories":["trace-posts"],"patternName":"trace/query-editorial-list-animated","name":"Editorial List (Hover Preview)"},"className":"trace-featured-reveal"} -->
 
 <div class="wp-block-query trace-featured-reveal"><!-- wp:post-template {"layout":{"type":"default"}} -->
 <!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border","width":"1px"},"top":{},"right":{},"left":{}}},"layout":{"type":"default"}} -->

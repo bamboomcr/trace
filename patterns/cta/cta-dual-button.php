@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: CTA Dual Button
+ * Title: CTA — Dual Button
  * Slug: trace/cta-dual-button
  * Categories: trace-cta
  * Keywords: cta, call to action, buttons

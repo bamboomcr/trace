@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Pricing Cards
+ * Title: Pricing — Cards
  * Slug: trace/content-pricing-cards
- * Categories: trace-content
+ * Categories: trace-pricing
  * Keywords: pricing, cards, plans, features
- * Viewport width: 1400
+ * Viewport Width: 1400
  */
 ?>
 

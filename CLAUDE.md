@@ -41,13 +41,15 @@ trace/
 │   ├── fonts/                 # Self-hosted Space Grotesk + Google Sans Flex
 │   └── js/                    # Minimal — only when unavoidable
 ├── parts/                     # Header / footer template parts
-├── patterns/                  # Block patterns, organized by category
-│   ├── content/               # Cards, accordions, pricing, team
-│   ├── cta/                   # Calls-to-action
+├── patterns/                  # Block patterns; folder = category, filename = slug
+│   ├── pages/                 # Prebuilt pages (wp:pattern references only)
 │   ├── hero/                  # Page heroes
-│   ├── pages/                 # Full-page starter patterns
-│   ├── query/                 # Post loops
-│   └── sections/              # Generic section blocks
+│   ├── features/              # Feature grids, split lists, tabs, style guide
+│   ├── people/                # Team cards, testimonials
+│   ├── pricing/               # Pricing cards, FAQ accordion
+│   ├── posts/                 # Query loops (lists, grids, carousels)
+│   ├── cta/                   # Calls to action
+│   └── contact/               # Contact sections
 ├── styles/                    # Color scheme JSON files (variations)
 │   ├── black.json
 │   ├── light.json
@@ -156,11 +158,17 @@ and the default arrow glyph returns. Safe by default.
 
 - Has a `metadata.name` on the top-level block for editor List View identity
 - References colors by slug only, never hex
-- Lives in one of: content/, cta/, hero/, pages/, query/, sections/
+- Lives in the folder for its category, in a file named after its slug
+  (`trace/hero-primary-cta` → `hero/hero-primary-cta.php`)
+- Is titled "Group — Name", with "(Animated)" last when there is a plain twin
 
-Multi-section patterns get descriptive sub-names (e.g. "Pricing Cards —
-Intro" + "Pricing Cards — Plans"). When in doubt, look at how
-`content-accordion-faq.php` handles this and follow the pattern.
+Slugs are permanent (saved content references them), which is why some
+keep an old `content-` / `section-` / `query-` prefix that no longer
+matches their folder. Titles, categories and folders can change freely.
+
+The header parts ship a default menu (Work, About, Services, Journal,
+Contact, Get Started) as inner blocks of the Navigation block, matching the
+prebuilt pages. Keep the two in step.
 
 ### Prebuilt pages
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Hero — Primary Call to Action
+ * Title: Hero — Primary CTA
  * Slug: trace/hero-primary-cta
  * Categories: trace-hero
  * Keywords: hero, banners, cover, cta, parallax

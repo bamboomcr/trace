@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Testimonials
+ * Title: People — Testimonials
  * Slug: trace/content-testimonials
- * Categories: trace-content
+ * Categories: trace-people
  * Keywords: testimonials, quotes
- * Viewport width: 1400
+ * Viewport Width: 1400
  */
 ?>
 

@@ -117,11 +117,13 @@ add_action('wp_enqueue_scripts', 'trace_enqueue_assets', 20);
  */
 add_action('init', function () {
 	register_block_pattern_category('trace-pages', ['label' => __('Trace: Pages', 'trace')]);
-	register_block_pattern_category('trace-hero', ['label' => __('Trace: Hero', 'trace')]);
-	register_block_pattern_category('trace-content', ['label' => __('Trace: Content', 'trace')]);
-	register_block_pattern_category('trace-sections', ['label' => __('Trace: Sections', 'trace')]);
-	register_block_pattern_category('trace-query', ['label' => __('Trace: Query', 'trace')]);
-	register_block_pattern_category('trace-cta', ['label' => __('Trace: CTA', 'trace')]);
+	register_block_pattern_category('trace-hero', ['label' => __('Trace: Heroes', 'trace')]);
+	register_block_pattern_category('trace-features', ['label' => __('Trace: Features', 'trace')]);
+	register_block_pattern_category('trace-people', ['label' => __('Trace: People', 'trace')]);
+	register_block_pattern_category('trace-pricing', ['label' => __('Trace: Pricing & FAQ', 'trace')]);
+	register_block_pattern_category('trace-posts', ['label' => __('Trace: Posts', 'trace')]);
+	register_block_pattern_category('trace-cta', ['label' => __('Trace: Calls to Action', 'trace')]);
+	register_block_pattern_category('trace-contact', ['label' => __('Trace: Contact', 'trace')]);
 });
 
 

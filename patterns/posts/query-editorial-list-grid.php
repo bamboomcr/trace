@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Editorial List Grid
+ * Title: Posts — Editorial Grid
  * Slug: trace/query-editorial-list-grid
- * Categories: trace-query
+ * Categories: trace-posts
  * Keywords: query, list, editorial, grid, preview
  * Viewport Width: 1400
  */
 ?>
 
-<!-- wp:query {"queryId":9,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"category":[],"post_tag":[]},"parents":[],"format":[]},"metadata":{"categories":["trace-query"],"patternName":"trace/query-editorial-list-grid","name":"Editorial List Grid"},"className":"trace-list-grid"} -->
+<!-- wp:query {"queryId":9,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"category":[],"post_tag":[]},"parents":[],"format":[]},"metadata":{"categories":["trace-posts"],"patternName":"trace/query-editorial-list-grid","name":"Editorial List Grid"},"className":"trace-list-grid"} -->
 
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":5}} -->
 <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","sizeSlug":"medium"} /-->

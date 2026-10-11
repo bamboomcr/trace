@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Style Guide
+ * Title: Features — Style Guide
  * Slug: trace/section-style-guide
- * Categories: trace-sections
+ * Categories: trace-features
  * Keywords: style guide, typography, colours, buttons, specimen
  * Viewport Width: 1400
  * Description: Type scale, button styles, colour palette and common blocks in one section.

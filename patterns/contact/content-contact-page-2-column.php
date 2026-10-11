@@ -1,15 +1,15 @@
 <?php
 /**
- * Title: Contact Page - Two Column
+ * Title: Contact — Two Column
  * Slug: trace/content-contact-page-2-column
- * Categories: trace-pages
+ * Categories: trace-contact
  * Keywords: contact, form, page, two column
  * Viewport Width: 1400
  * Description: Contact section: intro and social links beside a contact form.
  */
 ?>
 
-<!-- wp:columns {"metadata":{"categories":["trace-content"],"patternName":"trace/content-contact-page-2-column","name":"Contact Page - Two Column"}} -->
+<!-- wp:columns {"metadata":{"categories":["trace-contact"],"patternName":"trace/content-contact-page-2-column","name":"Contact Page - Two Column"}} -->
 
 <div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:heading {"style":{"typography":{"lineHeight":"1"}},"fontSize":"heading-xl"} -->

@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: CTA - Simple CTA
+ * Title: CTA — Simple
  * Slug: trace/cta-simple
  * Categories: trace-cta
  * Keywords: cta, simple

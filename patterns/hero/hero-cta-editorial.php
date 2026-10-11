@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Hero — Call to Action Editorial
+ * Title: Hero — Editorial CTA
  * Slug: trace/hero-cta-editorial
  * Categories: trace-hero
  * Keywords: hero, banners, cover, cta, editorial, parallax

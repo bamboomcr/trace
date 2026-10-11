@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Team Member Cards
+ * Title: People — Team Cards
  * Slug: trace/team-member-cards
- * Categories: trace-content
+ * Categories: trace-people
  * Keywords: member, team, cards, features
- * Viewport width: 1400
+ * Viewport Width: 1400
  */
 ?>
 

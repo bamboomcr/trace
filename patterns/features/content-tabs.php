@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Content Tabs
+ * Title: Features — Tabs
  * Slug: trace/content-tabs
- * Categories: trace-content
+ * Categories: trace-features
  * Keywords: tabs, content, panels, switcher
- * Viewport width: 1400
+ * Viewport Width: 1400
  * Description: Buttons across the top switch between 2-column content panels with a smooth fade.
  */
 ?>

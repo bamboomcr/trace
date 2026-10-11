@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Feature Grid (Animated)
- * Slug: trace/content-feature-grid-animated
- * Categories: trace-content
- * Keywords: features, grid, cards, animated
- * Viewport width: 1400
+ * Title: Features — Grid
+ * Slug: trace/content-feature-grid
+ * Categories: trace-features
+ * Keywords: features, grid, cards
+ * Viewport Width: 1400
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Feature Grid (Animated)"},"align":"full","className":"trace-reveal","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--l)","bottom":"var(--wp--preset--spacing--l)"}}}} -->
-<div class="wp-block-group alignfull trace-reveal" style="padding-top:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l)">
+<!-- wp:group {"metadata":{"name":"Feature Grid"},"align":"full","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--l)","bottom":"var(--wp--preset--spacing--l)"}}}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l)">
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
 		<!-- wp:heading {"level":2} -->

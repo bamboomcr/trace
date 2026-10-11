@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Editorial List Numbered
+ * Title: Posts — Numbered List
  * Slug: trace/query-editorial-list-numbered
- * Categories: trace-query
+ * Categories: trace-posts
  * Keywords: query, list, editorial, numbered
  * Viewport Width: 1400
  */
 ?>
 
-<!-- wp:group {"metadata":{"categories":["trace-query"],"patternName":"trace/query-editorial-list-numbered","name":"Editorial List Numbered"},"align":"wide"} -->
+<!-- wp:group {"metadata":{"categories":["trace-posts"],"patternName":"trace/query-editorial-list-numbered","name":"Editorial List Numbered"},"align":"wide"} -->
 <div class="wp-block-group alignwide"><!-- wp:query {"queryId":24,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"className":"numbered-loop"} -->
 <div class="wp-block-query numbered-loop"><!-- wp:post-template -->
 <!-- wp:separator {"className":"alignwide is-style-wide","backgroundColor":"border"} -->

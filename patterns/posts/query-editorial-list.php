@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Editorial List
+ * Title: Posts — Editorial List
  * Slug: trace/query-editorial-list
- * Categories: trace-query
+ * Categories: trace-posts
  * Keywords: query, list, editorial
  * Viewport Width: 1400
  */
 ?>
 
-<!-- wp:query {"queryId":32,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"date","inherit":false,"offset":0},"metadata":{"categories":["trace-query"],"patternName":"trace/query-editorial-list","name":"Editorial List"}} -->
+<!-- wp:query {"queryId":32,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"date","inherit":false,"offset":0},"metadata":{"categories":["trace-posts"],"patternName":"trace/query-editorial-list","name":"Editorial List"}} -->
  
 <div class="wp-block-query"><!-- wp:post-template {"style":{"typography":{"textTransform":"none"}}} -->
 <!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border","width":"1px"},"top":{},"right":{},"left":{}}},"layout":{"type":"default"}} -->

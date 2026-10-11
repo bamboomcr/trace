@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Accordion FAQ
+ * Title: FAQ — Accordion
  * Slug: trace/content-accordion-faq
- * Categories: trace-content
+ * Categories: trace-pricing
  * Keywords: accordion, faq, questions, answers
- * Viewport width: 1400
+ * Viewport Width: 1400
  */
 ?>
 
-<!-- wp:columns {"metadata":{"categories":["trace-content"],"patternName":"trace/content-accordion-faq","name":"Accordion FAQ"},"className":"accordion-faq"} -->
+<!-- wp:columns {"metadata":{"categories":["trace-pricing"],"patternName":"trace/content-accordion-faq","name":"Accordion FAQ"},"className":"accordion-faq"} -->
 <div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:paragraph {"fitText":true} -->
 <p class="has-fit-text"><?php esc_html_e( 'Q&A', 'trace' ); ?></p>
