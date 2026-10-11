@@ -23,8 +23,8 @@ $img = get_theme_file_uri( 'assets/images/placeholder-hero.svg' );
 <!-- /wp:columns -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","flexWrap":"nowrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline","style":{"spacing":{"padding":{"top":"24px","right":"48px","bottom":"24px","left":"48px"}},"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600","letterSpacing":"0px"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-custom-font-size wp-element-button" href="#build-fast" style="padding-top:24px;padding-right:48px;padding-bottom:24px;padding-left:48px;font-size:16px;font-style:normal;font-weight:600;letter-spacing:0px">Get started</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline","style":{"spacing":{"padding":{"top":"24px","right":"48px","bottom":"24px","left":"48px"}},"typography":{"fontStyle":"normal","fontWeight":"600","letterSpacing":"0px"}},"fontSize":"body-m"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-body-m-font-size has-custom-font-size wp-element-button" href="#build-fast" style="padding-top:24px;padding-right:48px;padding-bottom:24px;padding-left:48px;font-style:normal;font-weight:600;letter-spacing:0px">Get started</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div></div>
 <!-- /wp:cover -->

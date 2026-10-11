@@ -18,7 +18,7 @@
 <p>✴︎</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:post-date {"textAlign":"left","format":"M j, Y","metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|foreground"}}},"typography":{"textTransform":"uppercase"}},"textColor":"foreground","fontSize":"small"} /--></div>
+<!-- wp:post-date {"textAlign":"left","format":"M j, Y","metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|foreground"}}},"typography":{"textTransform":"uppercase"}},"textColor":"foreground","fontSize":"meta"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:post-terms {"term":"category","prefix":"✴︎ ","style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground"}}},"typography":{"textTransform":"uppercase"}},"textColor":"foreground"} /--></div>

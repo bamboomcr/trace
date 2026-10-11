@@ -16,7 +16,7 @@
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 		<div class="wp-block-group">
 			<!-- wp:post-title {"isLink":true,"fontSize":"body-l"} /-->
-			<!-- wp:post-date {"fontSize":"small"} /-->
+			<!-- wp:post-date {"fontSize":"meta"} /-->
 		</div>
 		<!-- /wp:group -->
 	<!-- /wp:post-template -->

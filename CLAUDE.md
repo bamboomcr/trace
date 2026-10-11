@@ -295,9 +295,10 @@ Regenerate via the script in conversation history if a scheme changes.
 - **Validate JSON after edits.** A broken `theme.json` or pattern JSON
   silently breaks the editor. Run a Python json.load() on changed files
   before declaring done.
-- **Validate PHP** when editing `functions.php`. `php` is not on PATH in
-  the Claude shell, so load a page on `https://trace.local` afterwards and
-  check it renders with no PHP notices.
+- **Lint PHP** after editing any `.php` file. `php` is not on PATH, but
+  Local bundles it:
+  `"$HOME/Library/Application Support/Local/lightning-services/php-8.2.27+1/bin/darwin-arm64/bin/php" -l FILE`
+  (the version folder may change; `ls` the `lightning-services` directory).
 - **Version lives in `style.css` only.** `TRACE_VERSION` reads it; keep
   `readme.txt` "Stable tag" and `Changelog.md` in step when it changes.
 - **The recovery tool is your friend.** Suggest running it whenever
@@ -317,6 +318,18 @@ Regenerate via the script in conversation history if a scheme changes.
   reference first — those are referenced in patterns/parts.
 - Don't auto-register template parts by file discovery alone. Always
   explicit-register in `theme.json → templateParts`.
+
+## Building a release zip
+
+Always build from git, never by zipping the folder (the folder holds
+git-ignored demo photos that must not ship):
+
+```bash
+git archive --format=zip --prefix=trace/ -o ../trace-$(grep -m1 '^Version:' style.css | awk '{print $2}').zip HEAD
+```
+
+`.gitattributes` marks `CLAUDE.md`, `docs/`, `.claude/` and the git dotfiles
+as `export-ignore`, so they stay out of the zip.
 
 ## Useful commands
 

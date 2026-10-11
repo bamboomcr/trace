@@ -17,7 +17,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>If you have any inquiries or just want to<br>say hi, please use the contact form!</p>
+<p>Have a question or a project in mind?<br>Tell us a little about it.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":"60px"} -->
@@ -25,7 +25,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph {"fontSize":"body-l"} -->
-<p class="has-body-l-font-size">Follow us!</p>
+<p class="has-body-l-font-size">Follow us</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","layout":{"type":"flex","justifyContent":"left"}} -->
@@ -43,13 +43,19 @@
 
 <!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%"><!-- wp:group {"className":"is-style-card","layout":{"type":"constrained"}} -->
-<div class="wp-block-group is-style-card"><!-- wp:contact-form-7/contact-form-selector {"id":3104,"hash":"d043413","title":"Contact form 1"} -->
-<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="d043413" title="Contact form 1"]</div>
-<!-- /wp:contact-form-7/contact-form-selector -->
+<div class="wp-block-group is-style-card"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Send a message</h3>
+<!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph --></div>
+<!-- wp:paragraph {"textColor":"muted"} -->
+<p class="has-muted-color has-text-color">Replace this text with your form. Add the block from your form plugin here: Trace styles Contact Form 7, WPForms and Gravity Forms fields to match.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-primary-arrow"} -->
+<div class="wp-block-button is-style-primary-arrow"><a class="wp-block-button__link wp-element-button" href="mailto:hello@example.com">Email us</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

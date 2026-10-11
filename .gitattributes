@@ -1,0 +1,6 @@
+# Files left out of release zips built with `git archive`
+.gitattributes export-ignore
+.gitignore     export-ignore
+.claude        export-ignore
+CLAUDE.md      export-ignore
+docs           export-ignore

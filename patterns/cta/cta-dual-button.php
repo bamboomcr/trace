@@ -9,8 +9,8 @@
 ?>
 <!-- wp:group {"metadata":{"name":"CTA Dual Button"},"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
-	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
+	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--l)","bottom":"var(--wp--preset--spacing--l)"}}}} -->
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--l);padding-bottom:var(--wp--preset--spacing--l)">
 		<!-- wp:heading {"level":1} -->
 		<h1>A studio for clear, considered work.</h1>
 		<!-- /wp:heading -->

@@ -1374,7 +1374,7 @@ input[type=file] {
 	/* ---------- Helper text, errors, success ---------- */
 
 	:where(.description, .help, .helper-text, .wpforms-field-description, .gfield_description, .wpcf7-not-valid-tip) {
-		font-size: var(--wp--preset--font-size--small, 0.925rem);
+		font-size: var(--wp--preset--font-size--body-s, 0.925rem);
 		line-height: 1.4;
 		opacity: 0.8;
 		margin-top: 0.35rem;
