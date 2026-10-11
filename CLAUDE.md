@@ -145,7 +145,7 @@ and the default arrow glyph returns. Safe by default.
 
 ## Patterns
 
-31 patterns under `patterns/`, each:
+36 patterns under `patterns/`, each:
 
 - Has a `metadata.name` on the top-level block for editor List View identity
 - References colors by slug only, never hex
@@ -154,6 +154,20 @@ and the default arrow glyph returns. Safe by default.
 Multi-section patterns get descriptive sub-names (e.g. "Pricing Cards —
 Intro" + "Pricing Cards — Plans"). When in doubt, look at how
 `content-accordion-faq.php` handles this and follow the pattern.
+
+### Prebuilt pages
+
+Trace ships prebuilt pages as starter page patterns in `patterns/pages/`
+(`page-*.php`). Each has `Block Types: core/post-content` and
+`Post Types: page`, so it is offered in the "Choose a pattern" modal when a
+user adds a new page. A page pattern contains only `wp:pattern` references
+to section patterns — never its own markup — so fixing a section fixes
+every page that uses it. To add a page: copy `page-about.php`, change the
+header, list the section slugs. Section-level patterns must NOT carry
+`Block Types: core/post-content`, or they show up in the modal as pages.
+
+Hero-led pages rely on the header overlaying the first block. `page.html`
+allows that; posts that need it use the "Blank (hero-led)" template.
 
 ### Known issue (flagged, not fixed)
 

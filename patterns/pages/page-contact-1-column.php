@@ -4,9 +4,8 @@
  * Slug: trace/content-contact-page-1-column
  * Categories: trace-pages
  * Keywords: contact, form, page, one column
- * Block Types: core/post-content
  * Viewport Width: 1400
- * Description: A homepage built from Trace sections.
+ * Description: Contact section: a single-column contact form.
  */
 ?>
 

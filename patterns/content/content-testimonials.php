@@ -8,15 +8,6 @@
  */
 ?>
 
-<?php
-/**
- * Title: Testimonials Tabs
- * Slug: trace/content-testimonials
- * Categories: trace-content
- * Viewport Width: 1200
- */
-?>
-
 <!-- wp:group {"metadata":{"name":"Testimonials"},"className":"trace-tabs trace-ui","layout":{"type":"constrained"}} -->
 <div class="wp-block-group trace-tabs trace-ui">
 

@@ -4,9 +4,8 @@
  * Slug: trace/content-contact-page-2-column
  * Categories: trace-pages
  * Keywords: contact, form, page, two column
- * Block Types: core/post-content
  * Viewport Width: 1400
- * Description: A homepage built from Trace sections.
+ * Description: Contact section: intro and social links beside a contact form.
  */
 ?>
 

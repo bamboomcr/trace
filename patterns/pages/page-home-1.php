@@ -1,12 +1,13 @@
 <?php
 /**
- * Title: Homepage 1
+ * Title: Page — Home
  * Slug: trace/page-home-1
  * Categories: trace-pages
- * Keywords: starter, homepage
+ * Keywords: starter, page, home, homepage
  * Block Types: core/post-content
+ * Post Types: page
  * Viewport Width: 1400
- * Description: A homepage built from Trace sections.
+ * Description: Home page: hero, portfolio grid, pricing and a scrolling gallery call to action.
  */
 ?>
 
