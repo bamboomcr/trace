@@ -1,72 +1,61 @@
-=== FSE-1 ===
+=== Trace ===
 Contributors: Solo Themes
 Requires at least: 6.9
-Tested up to: 6.9
-Requires PHP: 8.4
-Stable tag: 1.1.1
+Tested up to: 7.1
+Requires PHP: 8.2
+Stable tag: 1.2.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+A typography-led WordPress block theme for editorial-leaning sites.
 
 == Description ==
 
-Trace is a lightweight, modern (Full Site Editing) block theme built for flexibility and longevity.
+Trace is a block theme (Full Site Editing) built around the idea that the words should be loud and the layout should be quiet.
 
-It provides a clean foundation for block-based WordPress sites, focusing on clarity, performance, and adaptability rather than opinionated design. Trace includes a minimal set of templates and template parts, allowing layouts to be shaped entirely through the Site Editor and reusable block patterns.
+* Two self-hosted variable fonts: Space Grotesk for headings, Google Sans Flex for body.
+* A twelve-slug colour system with four schemes (Black, Light, Harbor, Citron). Switch in Site Editor → Styles → Browse styles.
+* Three headers (static, fixed, smart) and three footers.
+* A library of section patterns: heroes, calls to action, feature grids, pricing, team, testimonials, FAQ, tabs and post lists.
+* Prebuilt pages (Home, About, Services, Pricing, FAQ, Journal, Contact) offered when you add a new page.
+* A "Blank (hero-led)" template for posts and pages that bring their own hero and heading.
 
-Designed to scale across a wide range of projects, FSE-1 is well suited to personal blogs, business websites, portfolios, and content-driven platforms. Its restrained defaults support both text-led and visual layouts, while global styles, typography settings, and colour palettes can be easily extended to meet specific branding or accessibility requirements.
+== Getting started ==
 
+1. Activate the theme, then open Appearance → Editor.
+2. Open the header and choose your menu in the Navigation block.
+3. Edit the footer links, contact details and social links to suit your site.
+4. Add a page and pick one of the Trace page layouts from the pattern chooser.
+
+The contact page layouts expect a form. They are built for Contact Form 7, which is optional: replace the form block with any form plugin you prefer.
+
+== Resetting customisations ==
+
+Tools → Reset Trace Customizations clears edits saved from the Site Editor (templates and template parts, or global styles) so the theme falls back to its own files. Posts, pages, menus and media are never touched.
 
 == Changelog ==
 
-= 1.1.1 =
-* Released: March 6, 2026
-
+See Changelog.md.
 
 == Copyright ==
 
-Trace WordPress Theme, (C) 2024-2025 WordPress.org and contributors.
-Trace is distributed under the terms of the GNU GPL.
+Trace WordPress Theme, (C) 2025-2026 Solo Themes.
+Trace is distributed under the terms of the GNU GPL, version 2 or later. See LICENSE.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+== Third-party resources ==
 
-This theme incorporates code from:
-. . . . .
+= Fonts =
 
+Space Grotesk
+License: SIL Open Font License 1.1, https://openfontlicense.org
+Source: https://fonts.google.com/specimen/Space+Grotesk
 
-This theme bundles the following third-party resources:
+Google Sans Flex
+License: SIL Open Font License 1.1, https://openfontlicense.org
+Source: https://fonts.google.com/specimen/Google+Sans+Flex
 
-=== Fonts ===
-.ttf files downloaded from fonts.google.com have been converted to .woff2 using
-https://github.com/google/woff2
+= Images =
 
-
-Roboto Slab Font
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Reference: https://github.com/googlefonts/robotoslab
-Source: https://fonts.google.com/specimen/Roboto+Slab
-
-Beiruti Font
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Reference: https://github.com/googlefonts/beiruti
-Source: https://fonts.google.com/specimen/Beiruti
-
-=== Images ===
-
-Northern Buttercups.
-Free public domain CC0 image.
-northern-buttercups-flowers.webp
-https://www.rawpixel.com/image/8802603
-
-License: CC0 https://creativecommons.org/publicdomain/zero/1.0/
-Small totara tree on ridge above Long Point, Porirua Harbour, by Leslie Adkin.
-Free public domain CC0 image.
-404-image.webp
-https://www.rawpixel.com/image/13029755
+TODO before release: every file in assets/images needs a source and a licence that allows redistribution (CC0 or equivalent) listed here. Images that cannot be sourced must be replaced.

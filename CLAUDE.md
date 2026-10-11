@@ -176,13 +176,6 @@ header, list the section slugs. Section-level patterns must NOT carry
 Hero-led pages rely on the header overlaying the first block. `page.html`
 allows that; posts that need it use the "Blank (hero-led)" template.
 
-### Known issue (flagged, not fixed)
-
-`sections/section-split-list.php` and `section-split-list-animated.php` have
-filenames swapped relative to their content. Titles and slugs match content
-correctly so editor display is fine; only the filenames are misleading. Worth
-fixing in a focused cleanup pass.
-
 ## Block styles registered
 
 - `is-style-card` (group, paragraph, columns) — `surface` background, padding
@@ -302,9 +295,11 @@ Regenerate via the script in conversation history if a scheme changes.
 - **Validate JSON after edits.** A broken `theme.json` or pattern JSON
   silently breaks the editor. Run a Python json.load() on changed files
   before declaring done.
-- **Validate PHP balance** when editing `functions.php`. Brace counts and
-  paren counts should match (current state: 51 open/close braces, 275
-  open/close parens after the recovery tool was added).
+- **Validate PHP** when editing `functions.php`. `php` is not on PATH in
+  the Claude shell, so load a page on `https://trace.local` afterwards and
+  check it renders with no PHP notices.
+- **Version lives in `style.css` only.** `TRACE_VERSION` reads it; keep
+  `readme.txt` "Stable tag" and `Changelog.md` in step when it changes.
 - **The recovery tool is your friend.** Suggest running it whenever
   schema, template, or pattern changes might have left stale DB state.
 

@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 /**
  * Theme constants.
  */
-define('TRACE_VERSION', '0.1.0');
+define('TRACE_VERSION', (string) wp_get_theme(get_template())->get('Version'));
 define('TRACE_PATH', get_template_directory());
 define('TRACE_URL', get_template_directory_uri());
 
@@ -270,7 +270,7 @@ add_action(
 			'core/post-content',
 			array(
 				'name' => 'page-background',
-				'label' => __('Page background', 'fse-v1'),
+				'label' => __('Page background', 'trace'),
 			)
 		);
 
@@ -433,7 +433,7 @@ add_action('init', function () {
 		'core/navigation-link',
 		array(
 			'name' => 'as-button',
-			'label' => 'Button',
+			'label' => __('Button', 'trace'),
 		)
 	);
 
@@ -441,7 +441,7 @@ add_action('init', function () {
 		'core/navigation-link',
 		array(
 			'name' => 'as-button-outline',
-			'label' => 'Button Outline',
+			'label' => __('Button Outline', 'trace'),
 		)
 	);
 

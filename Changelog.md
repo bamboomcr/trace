@@ -15,22 +15,51 @@ MAJOR.MINOR.PATCH
 
 ---
 
-# [Unreleased]
+# [1.2.0] — Unreleased
+
+Release-preparation pass.
 
 ### Added
-- Upcoming features being developed.
+
+- Prebuilt pages offered when adding a new page: Home, About, Services, Pricing, FAQ, Journal, Contact
+- "Blank (hero-led)" template for posts and pages that supply their own hero
+- Harbor and Citron colour schemes; `heading`, `body`, `background-inverse` and `accent-2` colour slugs
+- Radius block styles for Group, Image, Cover and Media & Text
+- Link arrow paragraph styles
+- Tools → Reset Trace Customizations
+- LICENSE file and licence headers
 
 ### Changed
-- Improvements to existing features.
+
+- Colour slug `text` renamed to `body` (see Fixed)
+- Line-height and letter-spacing tokens moved to `settings.custom` (`--wp--custom--line-height--*`, `--wp--custom--letter-spacing--*`)
+- Single posts show title, date, category, featured image, post navigation and comments
+- Blog home, archive and index templates use real post loops
+- Site title is no longer an `<h1>`; each page has one `<h1>`
+- Header and footers no longer contain site-specific menu ids, page ids, URLs or branding
+- Theme version is read from `style.css` in one place
 
 ### Fixed
-- Bug fixes currently in development.
+
+- Muted and other custom text colours were overridden everywhere: a palette slug named `text` generated a `.has-text-color` rule that collides with a WordPress core class
+- Line-height and letter-spacing rules were silently dropped (the preset variables never existed)
+- Search results ignored the search term
+- Blog home content sat underneath the fixed header
+- Page transitions hijacked cmd/ctrl-click and middle-click
+- Pattern and template markup that did not match its block attributes
+- Hard-coded hex colours in patterns and footers replaced with slugs
+- Split-list pattern filenames were swapped
 
 ### Removed
-- Deprecated functionality scheduled for removal.
 
-### Security
-- Security improvements.
+- Test page pattern
+- theme.json entries WordPress ignored (malformed block style variations)
+
+### Known issues
+
+- Bundled images still need sources and licences before release
+- Demo copy in the FAQ, pricing and team patterns still reads as Trace sales copy
+- Pattern text is not yet translatable
 
 
 ---
@@ -142,43 +171,6 @@ Examples
 - JavaScript fixes
 - minor accessibility improvements
 - layout corrections
-
-
----
-
-# Planned Roadmap
-
-### Version 1.2
-
-Focus: Stability and usability improvements
-
-- Fix Cover block parallax implementation
-- Improve mobile navigation
-- Implement inverted group style
-- Refactor pattern markup
-- Improve colour token behaviour
-
-
-### Version 1.3
-
-Focus: Design expansion
-
-- Introduce theme style variants
-- Trace Dark
-- Trace Light
-- High Contrast
-- Improve animation polish
-
-
-### Version 2.0
-
-Major architectural release
-
-- Fully refined design token system
-- Complete pattern library
-- improved mobile UX
-- performance optimisation
-- accessibility improvements
 
 
 ---

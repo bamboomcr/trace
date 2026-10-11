@@ -397,28 +397,6 @@
             }
         },
         "blocks": {
-            "core/group": {
-                "variations": [
-                    {
-                        "name": "card",
-                        "title": "Card",
-                        "styles": {
-                            "border": {
-                                "width": "1px",
-                                "radius": "0.75rem"
-                            },
-                            "spacing": {
-                                "padding": {
-                                    "top": "var(--wp--preset--spacing--m)",
-                                    "right": "var(--wp--preset--spacing--m)",
-                                    "bottom": "var(--wp--preset--spacing--m)",
-                                    "left": "var(--wp--preset--spacing--m)"
-                                }
-                            }
-                        }
-                    }
-                ]
-            },
             "core/heading": {
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--space-grotesk)",
@@ -475,31 +453,6 @@
             "core/navigation": {
                 "spacing": {
                     "blockGap": "1rem"
-                }
-            },
-            "core/list": {
-                "variations": {
-                    "styles": [
-                        {
-                            "name": "default",
-                            "label": "Default",
-                            "isDefault": true
-                        },
-                        {
-                            "name": "no-markers",
-                            "label": "No bullets / numbers"
-                        }
-                    ]
-                }
-            },
-            "core/latest-posts": {
-                "spacing": {
-                    "margin": true,
-                    "padding": true,
-                    "__experimentalDefaultControls": {
-                        "margin": true,
-                        "padding": true
-                    }
                 }
             }
         }

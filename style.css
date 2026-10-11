@@ -3,10 +3,13 @@ Theme Name: Trace
 Theme URI: https://solothemes.com/wordpress-themes/trace
 Author: Solo Themes
 Author URI: https://solothemes.com
-Description: Trace is a typography-led WordPress Block Theme.
-Version: 1.1.0
+Description: Trace is a typography-led WordPress block theme for editorial-leaning sites. Two self-hosted fonts, a twelve-slug colour system with four schemes, a library of section patterns and prebuilt pages.
+Version: 1.2.0
 Requires at least: 6.9
-Tested up to: 6.9
+Tested up to: 7.1
 Requires PHP: 8.2
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: trace
+Tags: full-site-editing, block-patterns, block-styles, style-variations, editor-style, custom-colors, custom-logo, custom-menu, featured-images, wide-blocks, blog, portfolio
 */

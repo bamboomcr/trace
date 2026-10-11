@@ -58,6 +58,11 @@
 		/* Fade-in is automatic via CSS on first paint */
 
 		document.addEventListener('click', function (event) {
+			/* Leave new-tab / new-window / download clicks to the browser */
+			if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+				return;
+			}
+
 			var link = event.target.closest('a');
 
 			if (!shouldHandleLink(link)) {

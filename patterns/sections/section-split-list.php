@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Section Split List (Animated)
- * Slug: trace/section-split-list-animated
+ * Title: Section Split List
+ * Slug: trace/section-split-list
  * Categories: trace-sections
- * Keywords: section, split, list, animated
+ * Keywords: section, split, list
  * Viewport Width: 1400
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Section Split List (Animated)"},"align":"full","className":"trace-reveal","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
-<div class="wp-block-group alignfull trace-reveal" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
+<!-- wp:group {"metadata":{"name":"Section Split List"},"align":"full","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
 	<!-- wp:columns {"align":"wide"} -->
 	<div class="wp-block-columns alignwide">
 		<!-- wp:column {"width":"45%"} -->
