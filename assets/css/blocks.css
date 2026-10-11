@@ -683,24 +683,24 @@ input[type=file] {
 .is-display-xl {
 	font-family: var(--wp--preset--font-family--space-grotesk);
 	font-size: var(--wp--preset--font-size--display-xl);
-	line-height: var(--wp--preset--line-height--display);
-	letter-spacing: var(--wp--preset--letter-spacing--tight);
+	line-height: var(--wp--custom--line-height--display);
+	letter-spacing: var(--wp--custom--letter-spacing--tight);
 	font-weight: 600;
 }
 
 .is-display-l {
 	font-family: var(--wp--preset--font-family--space-grotesk);
 	font-size: var(--wp--preset--font-size--display-l);
-	line-height: var(--wp--preset--line-height--display);
-	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	line-height: var(--wp--custom--line-height--display);
+	letter-spacing: var(--wp--custom--letter-spacing--slight);
 	font-weight: 600;
 }
 
 .is-display-m {
 	font-family: var(--wp--preset--font-family--space-grotesk);
 	font-size: var(--wp--preset--font-size--display-m);
-	line-height: var(--wp--preset--line-height--headings);
-	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	line-height: var(--wp--custom--line-height--headings);
+	letter-spacing: var(--wp--custom--letter-spacing--slight);
 	font-weight: 600;
 }
 
@@ -708,24 +708,24 @@ input[type=file] {
 .is-heading-xl {
 	font-family: var(--wp--preset--font-family--space-grotesk);
 	font-size: var(--wp--preset--font-size--heading-xl);
-	line-height: var(--wp--preset--line-height--headings);
-	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	line-height: var(--wp--custom--line-height--headings);
+	letter-spacing: var(--wp--custom--letter-spacing--slight);
 	font-weight: 600;
 }
 
 .is-heading-l {
 	font-family: var(--wp--preset--font-family--space-grotesk);
 	font-size: var(--wp--preset--font-size--heading-l);
-	line-height: var(--wp--preset--line-height--headings);
-	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	line-height: var(--wp--custom--line-height--headings);
+	letter-spacing: var(--wp--custom--letter-spacing--slight);
 	font-weight: 600;
 }
 
 .is-heading-m {
 	font-family: var(--wp--preset--font-family--space-grotesk);
 	font-size: var(--wp--preset--font-size--heading-m);
-	line-height: var(--wp--preset--line-height--headings);
-	letter-spacing: var(--wp--preset--letter-spacing--normal);
+	line-height: var(--wp--custom--line-height--headings);
+	letter-spacing: var(--wp--custom--letter-spacing--normal);
 	font-weight: 600;
 }
 
@@ -733,21 +733,21 @@ input[type=file] {
 .is-body-l {
 	font-family: var(--wp--preset--font-family--google-sans-flex);
 	font-size: var(--wp--preset--font-size--body-l);
-	line-height: var(--wp--preset--line-height--body);
+	line-height: var(--wp--custom--line-height--body);
 	font-weight: 400;
 }
 
 .is-body-m {
 	font-family: var(--wp--preset--font-family--google-sans-flex);
 	font-size: var(--wp--preset--font-size--body-m);
-	line-height: var(--wp--preset--line-height--body);
+	line-height: var(--wp--custom--line-height--body);
 	font-weight: 400;
 }
 
 .is-body-s {
 	font-family: var(--wp--preset--font-family--google-sans-flex);
 	font-size: var(--wp--preset--font-size--body-s);
-	line-height: var(--wp--preset--line-height--body);
+	line-height: var(--wp--custom--line-height--body);
 	font-weight: 400;
 }
 
@@ -778,28 +778,28 @@ input[type=file] {
 
 /* Tracking helpers */
 .is-tracking-tight {
-	letter-spacing: var(--wp--preset--letter-spacing--tight);
+	letter-spacing: var(--wp--custom--letter-spacing--tight);
 }
 
 .is-tracking-slight {
-	letter-spacing: var(--wp--preset--letter-spacing--slight);
+	letter-spacing: var(--wp--custom--letter-spacing--slight);
 }
 
 .is-tracking-normal {
-	letter-spacing: var(--wp--preset--letter-spacing--normal);
+	letter-spacing: var(--wp--custom--letter-spacing--normal);
 }
 
 /* Leading helpers */
 .is-leading-display {
-	line-height: var(--wp--preset--line-height--display);
+	line-height: var(--wp--custom--line-height--display);
 }
 
 .is-leading-headings {
-	line-height: var(--wp--preset--line-height--headings);
+	line-height: var(--wp--custom--line-height--headings);
 }
 
 .is-leading-body {
-	line-height: var(--wp--preset--line-height--body);
+	line-height: var(--wp--custom--line-height--body);
 }
 
 /* Case helpers */
@@ -816,19 +816,6 @@ input[type=file] {
 	text-decoration: underline;
 }
 
-/* Semantic colour helpers */
-/* .is-text-default {
-		color: var(--wp--preset--color--foreground, currentColor);
-	}
-	.is-text-inverse {
-		color: var(--wp--preset--color--background, #ffffff);
-	}
-	.is-muted-text {
-		color: var(--wp--preset--color--muted, #bdbdbd);
-	}
-	.is-subtle-text {
-		color: var(--wp--preset--color--subtle, #999999);
-	} */
 
 
 /* ==========================================================================
@@ -913,7 +900,7 @@ input[type=file] {
 	margin-top: var(--wp--preset--spacing--s);
 	margin-bottom: 0.15em;
 	font-family: var(--wp--preset--font-family--space-grotesk);
-	line-height: var(--wp--preset--line-height--headings);
+	line-height: var(--wp--custom--line-height--headings);
 }
 
 /* Role / title (first paragraph usually) 
