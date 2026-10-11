@@ -23,7 +23,7 @@
                 {
                     "name": "Muted",
                     "slug": "muted",
-                    "color": "#B8C9D6"
+                    "color": "#D6E1E9"
                 },
                 {
                     "name": "Foreground",
@@ -58,7 +58,7 @@
                 {
                     "name": "Danger",
                     "slug": "danger",
-                    "color": "#D14B3F"
+                    "color": "#FFC2BA"
                 },
                 {
                     "name": "Highlight",

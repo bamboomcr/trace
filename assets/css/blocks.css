@@ -8,6 +8,23 @@
     ====================================================================== */
 
 /*  =========================================================================
+	Text colour on an `action` fill
+	`action` is free per scheme, so no single slug is guaranteed to be
+	readable on top of it (white on Light's lime is 1.1:1). Where the
+	browser supports relative colour syntax, pick black or white from the
+	lightness of `action`; otherwise fall back to the page background.
+	======================================================================= */
+:root {
+	--trace-on-action: var(--wp--preset--color--background);
+}
+
+@supports (color: oklch(from red l c h)) {
+	:root {
+		--trace-on-action: oklch(from var(--wp--preset--color--action) clamp(0, (0.6 - l) * 1000, 1) 0 0);
+	}
+}
+
+/*  =========================================================================
 	Header
 	======================================================================= */
 .site-header {
@@ -346,7 +363,7 @@ a:has(picture)::after {
 
 	/* match token approach */
 	background: var(--wp--preset--color--action);
-	color: var(--wp--preset--color--background) !important;
+	color: var(--trace-on-action) !important;
 
 	/* match transitions (no floaty transform/filter) */
 	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
@@ -356,13 +373,13 @@ a:has(picture)::after {
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:hover,
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
 	background: var(--wp--preset--color--action);
-	color: var(--wp--preset--color--background) !important;
+	color: var(--trace-on-action) !important;
 	border-color: transparent;
 }
 
 /* Focus ring matches your button system */
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
-	outline: 2px solid var(--wp--preset--color--action);
+	outline: 2px solid var(--wp--preset--color--foreground);
 	outline-offset: 3px;
 }
 
@@ -396,7 +413,7 @@ a:has(picture)::after {
 }
 
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:focus-visible {
-	outline: 2px solid var(--wp--preset--color--action);
+	outline: 2px solid var(--wp--preset--color--foreground);
 	outline-offset: 3px;
 }
 
@@ -437,7 +454,7 @@ input[type=file] {
 
 /* Focus accessibility */
 .wp-block-button__link:focus-visible {
-	outline: 2px solid var(--wp--preset--color--action);
+	outline: 2px solid var(--wp--preset--color--foreground);
 	outline-offset: 3px;
 }
 
@@ -445,14 +462,14 @@ input[type=file] {
 .wp-block-button:not(.is-style-outline):not(.is-style-ghost):not(.is-style-ghost-arrow):not(.is-style-ghost-arrow-left) .wp-block-button__link:hover,
 .wp-block-button:not(.is-style-outline):not(.is-style-ghost):not(.is-style-ghost-arrow):not(.is-style-ghost-arrow-left) .wp-block-button__link:focus-visible {
 	background: var(--wp--preset--color--action);
-	color: var(--wp--preset--color--background);
+	color: var(--trace-on-action);
 }
 
 /* FILL explicitly */
 .wp-block-button.is-style-fill .wp-block-button__link:hover,
 .wp-block-button.is-style-fill .wp-block-button__link:focus-visible {
 	background: var(--wp--preset--color--action);
-	color: var(--wp--preset--color--background);
+	color: var(--trace-on-action);
 }
 
 /* OUTLINE */
@@ -550,11 +567,11 @@ input[type=file] {
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:hover,
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
 	background: var(--wp--preset--color--action);
-	color: var(--wp--preset--color--background) !important;
+	color: var(--trace-on-action) !important;
 }
 
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button>a:focus-visible {
-	outline: 2px solid var(--wp--preset--color--action);
+	outline: 2px solid var(--wp--preset--color--foreground);
 	outline-offset: 3px;
 }
 
@@ -592,7 +609,7 @@ input[type=file] {
 }
 
 .wp-block-navigation .wp-block-navigation-link.is-style-as-button-outline>a:focus-visible {
-	outline: 2px solid var(--wp--preset--color--action);
+	outline: 2px solid var(--wp--preset--color--foreground);
 	outline-offset: 3px;
 }
 
@@ -1269,7 +1286,7 @@ input[type=file] {
 	/* Make focus look intentional (keyboard accessibility) */
 	:where(input[type=button]:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible),
 	input[type=file]:focus-visible {
-		outline: 2px solid var(--wp--preset--color--action);
+		outline: 2px solid var(--wp--preset--color--foreground);
 		outline-offset: 3px;
 	}
 
