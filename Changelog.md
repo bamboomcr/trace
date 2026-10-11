@@ -28,6 +28,8 @@ Release-preparation pass.
 - Link arrow paragraph styles
 - Tools → Reset Trace Customizations
 - LICENSE file and licence headers
+- All pattern text is translatable (text domain `trace`)
+- Release zips are built with `git archive`; dev-only files are export-ignored
 
 ### Changed
 
@@ -38,9 +40,14 @@ Release-preparation pass.
 - Site title is no longer an `<h1>`; each page has one `<h1>`
 - Header and footers no longer contain site-specific menu ids, page ids, URLs or branding
 - Theme version is read from `style.css` in one place
+- Google Sans Flex reduced from 1.8 MB to 175 KB by pinning unused variable axes
+- Contact patterns no longer depend on Contact Form 7
+- All bundled photographs replaced with original SVG placeholders
 
 ### Fixed
 
+- Unreadable button hover text and invisible focus rings under the Light, Citron and Harbor schemes
+- Harbor: muted and danger colours now meet WCAG AA on the page background
 - Muted and other custom text colours were overridden everywhere: a palette slug named `text` generated a `.has-text-color` rule that collides with a WordPress core class
 - Line-height and letter-spacing rules were silently dropped (the preset variables never existed)
 - Search results ignored the search term
@@ -59,7 +66,7 @@ Release-preparation pass.
 
 ### Known issues
 
-- Pattern text is not yet translatable
+- Template and template-part text (plain HTML files) cannot be translated; this is a WordPress limitation
 
 
 ---

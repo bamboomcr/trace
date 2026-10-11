@@ -14,11 +14,11 @@
 		<!-- wp:column {"width":"45%"} -->
 		<div class="wp-block-column" style="flex-basis:45%">
 			<!-- wp:heading {"level":2} -->
-			<h2>Designed to feel quiet.</h2>
+			<h2><?php esc_html_e( 'Designed to feel quiet.', 'trace' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"body-l"} -->
-			<p class="has-body-l-font-size">Simple layout. Strong type. Lots of breathing room. We keep the structure out of your way.</p>
+			<p class="has-body-l-font-size"><?php esc_html_e( 'Simple layout. Strong type. Lots of breathing room. We keep the structure out of your way.', 'trace' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -27,10 +27,10 @@
 		<div class="wp-block-column" style="flex-basis:55%">
 			<!-- wp:list -->
 			<ul>
-				<li>Clean full-width foundations</li>
-				<li>Editorial rhythm and spacing</li>
-				<li>Patterns that scale with your content</li>
-				<li>Optional motion, never required</li>
+				<li><?php esc_html_e( 'Clean full-width foundations', 'trace' ); ?></li>
+				<li><?php esc_html_e( 'Editorial rhythm and spacing', 'trace' ); ?></li>
+				<li><?php esc_html_e( 'Patterns that scale with your content', 'trace' ); ?></li>
+				<li><?php esc_html_e( 'Optional motion, never required', 'trace' ); ?></li>
 			</ul>
 			<!-- /wp:list -->
 		</div>

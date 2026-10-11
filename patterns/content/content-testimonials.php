@@ -28,14 +28,14 @@
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1"><?php esc_html_e( '200+ projects', 'trace' ); ?><br><?php esc_html_e( 'delivered', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)"><?php esc_html_e( 'Read more reviews', 'trace' ); ?></a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -46,11 +46,11 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">They took a loose idea and came back with something clearer than we had imagined. The process was calm, quick and well explained.</p>
+						<p class="has-text-align-left has-heading-m-font-size"><?php esc_html_e( 'They took a loose idea and came back with something clearer than we had imagined. The process was calm, quick and well explained.', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p>Sophie Bennett, Visual Artist</p>
+						<p><?php esc_html_e( 'Sophie Bennett, Visual Artist', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -70,14 +70,14 @@
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1"><?php esc_html_e( '200+ projects', 'trace' ); ?><br><?php esc_html_e( 'delivered', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)"><?php esc_html_e( 'Read more reviews', 'trace' ); ?></a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -88,11 +88,11 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">We have worked with the team on three projects now. The work is thoughtful, the typography is beautiful and deadlines are met.</p>
+						<p class="has-text-align-left has-heading-m-font-size"><?php esc_html_e( 'We have worked with the team on three projects now. The work is thoughtful, the typography is beautiful and deadlines are met.', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p>Matthew Lawson, L Creative</p>
+						<p><?php esc_html_e( 'Matthew Lawson, L Creative', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -112,14 +112,14 @@
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1"><?php esc_html_e( '200+ projects', 'trace' ); ?><br><?php esc_html_e( 'delivered', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)"><?php esc_html_e( 'Read more reviews', 'trace' ); ?></a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -130,11 +130,11 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">Everything felt considered. I wanted something simple that looked great and was easy to keep up to date, and that is what I got.</p>
+						<p class="has-text-align-left has-heading-m-font-size"><?php esc_html_e( 'Everything felt considered. I wanted something simple that looked great and was easy to keep up to date, and that is what I got.', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p>Lucy Parker, Blogger</p>
+						<p><?php esc_html_e( 'Lucy Parker, Blogger', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>
@@ -154,14 +154,14 @@
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1"><?php esc_html_e( '200+ projects', 'trace' ); ?><br><?php esc_html_e( 'delivered', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)"><?php esc_html_e( 'Read more reviews', 'trace' ); ?></a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -172,11 +172,11 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">I have worked with a lot of studios over the years, and this one stood out straight away. Minimal, fast and properly polished.</p>
+						<p class="has-text-align-left has-heading-m-font-size"><?php esc_html_e( 'I have worked with a lot of studios over the years, and this one stood out straight away. Minimal, fast and properly polished.', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
-						<p>James Carter, Photographer</p>
+						<p><?php esc_html_e( 'James Carter, Photographer', 'trace' ); ?></p>
 						<!-- /wp:paragraph -->
 
 					</div>

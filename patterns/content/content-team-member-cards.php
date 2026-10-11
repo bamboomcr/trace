@@ -23,11 +23,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3} -->
-			<h3 class="wp-block-heading has-text-align-center">Name Surname</h3>
+			<h3 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Name Surname', 'trace' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs"}}},"fontSize":"body-s"} -->
-			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
+			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)"><?php esc_html_e( 'Job title', 'trace' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
@@ -55,11 +55,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3} -->
-			<h3 class="wp-block-heading has-text-align-center">Name Surname</h3>
+			<h3 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Name Surname', 'trace' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs"}}},"fontSize":"body-s"} -->
-			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
+			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)"><?php esc_html_e( 'Job title', 'trace' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
@@ -87,11 +87,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3} -->
-			<h3 class="wp-block-heading has-text-align-center">Name Surname</h3>
+			<h3 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Name Surname', 'trace' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs"}}},"fontSize":"body-s"} -->
-			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
+			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)"><?php esc_html_e( 'Job title', 'trace' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
@@ -119,11 +119,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3} -->
-			<h3 class="wp-block-heading has-text-align-center">Name Surname</h3>
+			<h3 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Name Surname', 'trace' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs"}}},"fontSize":"body-s"} -->
-			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
+			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)"><?php esc_html_e( 'Job title', 'trace' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->
@@ -151,11 +151,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:heading {"textAlign":"center","level":3} -->
-			<h3 class="wp-block-heading has-text-align-center">Name Surname</h3>
+			<h3 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Name Surname', 'trace' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs"}}},"fontSize":"body-s"} -->
-			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)">Job title</p>
+			<p class="has-text-align-center has-body-s-font-size" style="margin-top:var(--wp--preset--spacing--xs);margin-bottom:var(--wp--preset--spacing--xs)"><?php esc_html_e( 'Job title', 'trace' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:social-links {"iconColor":"background","iconBackgroundColor":"foreground","size":"has-normal-icon-size","className":"is-style-default","layout":{"type":"flex","justifyContent":"center"}} -->

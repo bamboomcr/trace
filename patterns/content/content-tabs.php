@@ -17,25 +17,25 @@
 
 		<!-- wp:button {"className":"trace-tab"} -->
 		<div class="wp-block-button trace-tab">
-			<a class="wp-block-button__link wp-element-button" href="#panel-1">Tab One</a>
+			<a class="wp-block-button__link wp-element-button" href="#panel-1"><?php esc_html_e( 'Tab One', 'trace' ); ?></a>
 		</div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"trace-tab"} -->
 		<div class="wp-block-button trace-tab">
-			<a class="wp-block-button__link wp-element-button" href="#panel-2">Tab Two</a>
+			<a class="wp-block-button__link wp-element-button" href="#panel-2"><?php esc_html_e( 'Tab Two', 'trace' ); ?></a>
 		</div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"trace-tab"} -->
 		<div class="wp-block-button trace-tab">
-			<a class="wp-block-button__link wp-element-button" href="#panel-3">Tab Three</a>
+			<a class="wp-block-button__link wp-element-button" href="#panel-3"><?php esc_html_e( 'Tab Three', 'trace' ); ?></a>
 		</div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"trace-tab"} -->
 		<div class="wp-block-button trace-tab">
-			<a class="wp-block-button__link wp-element-button" href="#panel-4">Tab Four</a>
+			<a class="wp-block-button__link wp-element-button" href="#panel-4"><?php esc_html_e( 'Tab Four', 'trace' ); ?></a>
 		</div>
 		<!-- /wp:button -->
 
@@ -54,18 +54,18 @@
 				<!-- wp:column {"verticalAlignment":"center"} -->
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:heading {"level":3} -->
-					<h3>First headline</h3>
+					<h3><?php esc_html_e( 'First headline', 'trace' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>Write your panel content here. This column is your text, CTA, list, etc.</p>
+					<p><?php esc_html_e( 'Write your panel content here. This column is your text, CTA, list, etc.', 'trace' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:buttons -->
 					<div class="wp-block-buttons">
 						<!-- wp:button -->
 						<div class="wp-block-button">
-							<a class="wp-block-button__link wp-element-button" href="#">Call to action</a>
+							<a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Call to action', 'trace' ); ?></a>
 						</div>
 						<!-- /wp:button -->
 					</div>
@@ -97,11 +97,11 @@
 				<!-- wp:column {"verticalAlignment":"center"} -->
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:heading {"level":3} -->
-					<h3>2nd headline</h3>
+					<h3><?php esc_html_e( '2nd headline', 'trace' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>Swap in different copy and a different image. This panel will fade in.</p>
+					<p><?php esc_html_e( 'Swap in different copy and a different image. This panel will fade in.', 'trace' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:column -->
@@ -130,11 +130,11 @@
 				<!-- wp:column {"verticalAlignment":"center"} -->
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:heading {"level":3} -->
-					<h3>Panel Three headline</h3>
+					<h3><?php esc_html_e( 'Panel Three headline', 'trace' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>3rd panel content.</p>
+					<p><?php esc_html_e( '3rd panel content.', 'trace' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:column -->
@@ -163,11 +163,11 @@
 				<!-- wp:column {"verticalAlignment":"center"} -->
 				<div class="wp-block-column is-vertically-aligned-center">
 					<!-- wp:heading {"level":3} -->
-					<h3>Panel Four headline</h3>
+					<h3><?php esc_html_e( 'Panel Four headline', 'trace' ); ?></h3>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>4th panel content.</p>
+					<p><?php esc_html_e( '4th panel content.', 'trace' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:column -->

@@ -12,7 +12,7 @@
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
 		<!-- wp:heading {"level":2} -->
-		<h2>What we do well</h2>
+		<h2><?php esc_html_e( 'What we do well', 'trace' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:columns -->
@@ -20,10 +20,10 @@
 			<!-- wp:column -->
 			<div class="wp-block-column">
 				<!-- wp:heading {"level":3} -->
-				<h3>Typography first</h3>
+				<h3><?php esc_html_e( 'Typography first', 'trace' ); ?></h3>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph -->
-				<p>Type scale and spacing that make even simple pages feel considered.</p>
+				<p><?php esc_html_e( 'Type scale and spacing that make even simple pages feel considered.', 'trace' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->
@@ -31,10 +31,10 @@
 			<!-- wp:column -->
 			<div class="wp-block-column">
 				<!-- wp:heading {"level":3} -->
-				<h3>Clear structure</h3>
+				<h3><?php esc_html_e( 'Clear structure', 'trace' ); ?></h3>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph -->
-				<p>Layouts that stay predictable as your site and your content grow.</p>
+				<p><?php esc_html_e( 'Layouts that stay predictable as your site and your content grow.', 'trace' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->
@@ -42,10 +42,10 @@
 			<!-- wp:column -->
 			<div class="wp-block-column">
 				<!-- wp:heading {"level":3} -->
-				<h3>Optional motion</h3>
+				<h3><?php esc_html_e( 'Optional motion', 'trace' ); ?></h3>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph -->
-				<p>Add subtle interaction where it helps, keep everything calm everywhere else.</p>
+				<p><?php esc_html_e( 'Add subtle interaction where it helps, keep everything calm everywhere else.', 'trace' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->

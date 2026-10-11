@@ -21,7 +21,7 @@ $imgs = [
 <div class="wp-block-group alignfull cta-scrolling-gallery trace-scroll-cta" style="padding-right:0;padding-left:0">
 
 	<!-- wp:paragraph {"fitText":true} -->
-	<p class="has-fit-text">Let’s make something good.</p>
+	<p class="has-fit-text"><?php esc_html_e( 'Let’s make something good.', 'trace' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:gallery {"columns":1,"linkTo":"none","sizeSlug":"thumbnail","aspectRatio":"4/3"} -->
@@ -62,12 +62,12 @@ $imgs = [
 <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><!-- wp:column {"verticalAlignment":"bottom","width":"100%"} -->
 <div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:100%"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"right","style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"xl"} -->
-<h2 class="wp-block-heading has-text-align-right has-xl-font-size" style="font-style:normal;font-weight:400">Your idea. Our craft.</h2>
+<h2 class="wp-block-heading has-text-align-right has-xl-font-size" style="font-style:normal;font-weight:400"><?php esc_html_e( 'Your idea. Our craft.', 'trace' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-primary-arrow","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}},"fontSize":"body-l"} -->
-<div class="wp-block-button is-style-primary-arrow"><a class="wp-block-button__link has-body-l-font-size has-custom-font-size wp-element-button" href="/" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Get Started</a></div>
+<div class="wp-block-button is-style-primary-arrow"><a class="wp-block-button__link has-body-l-font-size has-custom-font-size wp-element-button" href="/" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)"><?php esc_html_e( 'Get Started', 'trace' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

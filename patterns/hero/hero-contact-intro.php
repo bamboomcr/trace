@@ -14,6 +14,6 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1"}},"fontSize":"display-xl"} -->
-<h1 class="wp-block-heading has-display-xl-font-size" style="line-height:1">Get in touch</h1>
+<h1 class="wp-block-heading has-display-xl-font-size" style="line-height:1"><?php esc_html_e( 'Get in touch', 'trace' ); ?></h1>
 <!-- /wp:heading --></div></div>
 <!-- /wp:cover -->
