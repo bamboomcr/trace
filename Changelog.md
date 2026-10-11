@@ -24,6 +24,8 @@ Release-preparation pass.
 - Prebuilt pages offered when adding a new page: Home, Work, About, Services, Journal, Contact, Style Guide
 - Style Guide section pattern (type scale, buttons, palette, common blocks)
 - "Blank (hero-led)" template for posts and pages that supply their own hero
+- "Page with title" template for plain pages; pages without a hero no longer sit under the header
+- Default header menu matching the prebuilt pages
 - Harbor and Citron colour schemes; `heading`, `body`, `background-inverse` and `accent-2` colour slugs
 - Radius block styles for Group, Image, Cover and Media & Text
 - Link arrow paragraph styles

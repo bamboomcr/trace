@@ -182,7 +182,14 @@ header, list the section slugs. Section-level patterns must NOT carry
 `Block Types: core/post-content`, or they show up in the modal as pages.
 
 Hero-led pages rely on the header overlaying the first block. `page.html`
-allows that; posts that need it use the "Blank (hero-led)" template.
+allows that when the first block is a Cover; any other first block is
+pushed clear of the header by CSS. Posts that bring their own hero use the
+"Blank (hero-led)" template; plain pages that need a visible title (legal
+pages) use "Page with title".
+
+The demo on `https://trace.local` is seven pages (Home, Work, About,
+Services, Journal, Contact, Style Guide) whose content is `wp:pattern`
+references to the theme's sections, so it always shows what ships.
 
 ## Block styles registered
 
@@ -295,7 +302,11 @@ Regenerate via the script in conversation history if a scheme changes.
 
 ## Conventions
 
-- **wp-cli is available** when working from Local's site shell. Prefer
+- **wp-cli works from the Claude shell** via Local's bundled PHP and phar
+  (no browser login needed):
+  `"$L/lightning-services/php-8.2.27+1/bin/darwin-arm64/bin/php" -c "$L/run/EfyQGdj0X/conf/php/php.ini" /Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar --path="$HOME/Local Sites/trace/app/public" …`
+  with `L="$HOME/Library/Application Support/Local"`. The site must be
+  running in Local. Prefer
   `wp db query "..."` over manual SQL paste workflows. `wp post list`,
   `wp option get`, `wp transient delete --all` are all useful.
 - **Never modify files under `/mnt/skills/` or other read-only system

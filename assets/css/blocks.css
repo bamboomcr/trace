@@ -64,6 +64,12 @@ body:has(.site-header.is-smart, .site-header.is-fixed) .trace-header-offset {
 	padding-top: clamp(6rem, 4.5rem + 6vw, 10rem);
 }
 
+/* Pages and Blank posts: a Cover as the first block is a hero and stays
+   under the header. Any other first block is pushed clear of it. */
+body:has(.site-header.is-smart, .site-header.is-fixed) :is(.template-page, .template-blank):not(:has(.wp-block-post-content > .wp-block-cover:first-child)) {
+	padding-top: clamp(6rem, 4.5rem + 6vw, 10rem);
+}
+
 .trace-post-meta,
 .trace-post-nav {
 	gap: var(--wp--preset--spacing--m);
