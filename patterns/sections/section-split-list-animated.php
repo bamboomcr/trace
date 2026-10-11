@@ -18,7 +18,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"body-l"} -->
-			<p class="has-body-l-font-size">Simple layout. Strong type. Lots of breathing room. Trace keeps the structure out of your way.</p>
+			<p class="has-body-l-font-size">Simple layout. Strong type. Lots of breathing room. We keep the structure out of your way.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

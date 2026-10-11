@@ -20,7 +20,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"align":"center","fontSize":"xl"} -->
-<p class="has-text-align-center has-xl-font-size">Trace patterns are easy to use and edit. Built from basic blocks these patterns are designed to use, easy to drop in and quick to edit.</p>
+<p class="has-text-align-center has-xl-font-size">A short introduction goes here. Two or three sentences that say who you are, what you do and who it is for.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 

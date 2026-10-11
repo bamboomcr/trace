@@ -20,7 +20,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"align":"center","fontSize":"xl"} -->
-<p class="has-text-align-center has-xl-font-size">Trace editorial patterns use WordPress query blocks. Each pattern has been styled with and without some different effects and interactivity. You can choose what content is brought back from which category or tags. Just drop in the pattern, edit the query and you're done - Simple, fast and enjoyable.</p>
+<p class="has-text-align-center has-xl-font-size">Notes, case studies and ideas from the studio. Browse the latest below, or jump straight to the format you prefer.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl"}}},"layout":{"type":"flex","justifyContent":"center"}} -->

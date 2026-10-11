@@ -12,7 +12,7 @@
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
 		<!-- wp:heading {"level":2} -->
-		<h2>What Trace does well</h2>
+		<h2>What we do well</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:columns -->
@@ -31,10 +31,10 @@
 			<!-- wp:column -->
 			<div class="wp-block-column">
 				<!-- wp:heading {"level":3} -->
-				<h3>Simple layout system</h3>
+				<h3>Clear structure</h3>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph -->
-				<p>Full, wide, and content widths that stay predictable as your site grows.</p>
+				<p>Layouts that stay predictable as your site and your content grow.</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->

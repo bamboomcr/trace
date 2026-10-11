@@ -15,7 +15,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-primary-arrow","fontSize":"body-l"} -->
-<div class="wp-block-button is-style-primary-arrow"><a class="wp-block-button__link has-body-l-font-size has-custom-font-size wp-element-button">Visit our Help Centre</a></div>
+<div class="wp-block-button is-style-primary-arrow"><a class="wp-block-button__link has-body-l-font-size has-custom-font-size wp-element-button">Get in touch</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

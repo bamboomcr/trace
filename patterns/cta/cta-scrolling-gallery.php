@@ -8,12 +8,12 @@
  */
 
 $imgs = [
-	get_theme_file_uri( 'assets/images/70s-model.jpg' ),
-	get_theme_file_uri( 'assets/images/decor-furniture-mobile.jpg' ),
-	get_theme_file_uri( 'assets/images/right-on-magazine.jpg' ),
-	get_theme_file_uri( 'assets/images/vreality.jpg' ),
-	get_theme_file_uri( 'assets/images/ogo.jpg' ),
-	get_theme_file_uri( 'assets/images/trace-id-cards.jpg' ),
+	get_theme_file_uri( 'assets/images/placeholder-gallery-1.svg' ),
+	get_theme_file_uri( 'assets/images/placeholder-gallery-2.svg' ),
+	get_theme_file_uri( 'assets/images/placeholder-gallery-3.svg' ),
+	get_theme_file_uri( 'assets/images/placeholder-gallery-4.svg' ),
+	get_theme_file_uri( 'assets/images/placeholder-gallery-5.svg' ),
+	get_theme_file_uri( 'assets/images/placeholder-gallery-6.svg' ),
 ];
 ?>
 
@@ -21,7 +21,7 @@ $imgs = [
 <div class="wp-block-group alignfull cta-scrolling-gallery trace-scroll-cta" style="padding-right:0;padding-left:0">
 
 	<!-- wp:paragraph {"fitText":true} -->
-	<p class="has-fit-text">Get started today.</p>
+	<p class="has-fit-text">Let’s make something good.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:gallery {"columns":1,"linkTo":"none","sizeSlug":"thumbnail","aspectRatio":"4/3"} -->
@@ -62,7 +62,7 @@ $imgs = [
 <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><!-- wp:column {"verticalAlignment":"bottom","width":"100%"} -->
 <div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:100%"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"right","style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"xl"} -->
-<h2 class="wp-block-heading has-text-align-right has-xl-font-size" style="font-style:normal;font-weight:400">Your Theme. Your Rules</h2>
+<h2 class="wp-block-heading has-text-align-right has-xl-font-size" style="font-style:normal;font-weight:400">Your idea. Our craft.</h2>
 <!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->

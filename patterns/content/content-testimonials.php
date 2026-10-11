@@ -22,20 +22,20 @@
 				<!-- wp:media-text {"mediaType":"image","mediaWidth":40,"verticalAlignment":"bottom"} -->
 				<div class="wp-block-media-text is-stacked-on-mobile is-vertically-aligned-bottom" style="grid-template-columns:40% auto">
 					<figure class="wp-block-media-text__media">
-						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/testimonial-b.jpg' ) ); ?>" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-portrait-2.svg' ) ); ?>" alt="" />
 					</figure>
 
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ happy customers<br>and counting</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read More Reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -46,7 +46,7 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">Trace felt like incredible value from the start. I use it for my blog and portfolio, and the clean design suits my style perfectly. The layouts have a simplicity that really helps my work stand out.</p>
+						<p class="has-text-align-left has-heading-m-font-size">They took a loose idea and came back with something clearer than we had imagined. The process was calm, quick and well explained.</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
@@ -64,20 +64,20 @@
 				<!-- wp:media-text {"mediaType":"image","mediaWidth":40,"verticalAlignment":"bottom"} -->
 				<div class="wp-block-media-text is-stacked-on-mobile is-vertically-aligned-bottom" style="grid-template-columns:40% auto">
 					<figure class="wp-block-media-text__media">
-						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/testimonial-a.jpg' ) ); ?>" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-portrait-1.svg' ) ); ?>" alt="" />
 					</figure>
 
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ happy customers<br>and counting</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read More Reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -88,7 +88,7 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">We use Trace for smaller portfolio sites and personal projects. The design is modern, the typography is beautiful, and it’s incredibly flexible. It’s rare to find a theme this good at such a reasonable price.</p>
+						<p class="has-text-align-left has-heading-m-font-size">We have worked with the team on three projects now. The work is thoughtful, the typography is beautiful and deadlines are met.</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
@@ -106,20 +106,20 @@
 				<!-- wp:media-text {"mediaType":"image","mediaWidth":40,"verticalAlignment":"bottom"} -->
 				<div class="wp-block-media-text is-stacked-on-mobile is-vertically-aligned-bottom" style="grid-template-columns:40% auto">
 					<figure class="wp-block-media-text__media">
-						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/testimonial-c.jpg' ) ); ?>" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-portrait-3.svg' ) ); ?>" alt="" />
 					</figure>
 
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ happy customers<br>and counting</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read More Reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -130,7 +130,7 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">Trace has been perfect for my blog. It’s clean, easy to use, and everything just feels well thought out. I didn’t want a theme full of unnecessary features. I wanted something simple that looked great, and Trace delivers.</p>
+						<p class="has-text-align-left has-heading-m-font-size">Everything felt considered. I wanted something simple that looked great and was easy to keep up to date, and that is what I got.</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->
@@ -148,20 +148,20 @@
 				<!-- wp:media-text {"mediaType":"image","mediaWidth":40,"verticalAlignment":"bottom"} -->
 				<div class="wp-block-media-text is-stacked-on-mobile is-vertically-aligned-bottom" style="grid-template-columns:40% auto">
 					<figure class="wp-block-media-text__media">
-						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/testimonial-d.jpg' ) ); ?>" alt="" />
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-portrait-4.svg' ) ); ?>" alt="" />
 					</figure>
 
 					<div class="wp-block-media-text__content">
 
 						<!-- wp:paragraph {"align":"right","style":{"spacing":{"margin":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}},"typography":{"lineHeight":"1"}},"fontSize":"display-l"} -->
-						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ happy customers<br>and counting</p>
+						<p class="has-text-align-right has-display-l-font-size" style="margin-top:var(--wp--preset--spacing--s);margin-bottom:var(--wp--preset--spacing--s);line-height:1">200+ projects<br>delivered</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 						<div class="wp-block-buttons">
 							<!-- wp:button {"url":"#","style":{"spacing":{"padding":{"top":"var:preset|spacing|m","bottom":"var:preset|spacing|m"}}}} -->
 							<div class="wp-block-button">
-								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read More Reviews</a>
+								<a class="wp-block-button__link wp-element-button" href="#" style="padding-top:var(--wp--preset--spacing--m);padding-bottom:var(--wp--preset--spacing--m)">Read more reviews</a>
 							</div>
 							<!-- /wp:button -->
 						</div>
@@ -172,7 +172,7 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">I've tried a lot of themes over the years but Trace stood out straight away. The layout is beautifully minimal and perfect for showcasing photography. It feels fast, lightweight, and really polished.</p>
+						<p class="has-text-align-left has-heading-m-font-size">I have worked with a lot of studios over the years, and this one stood out straight away. Minimal, fast and properly polished.</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->

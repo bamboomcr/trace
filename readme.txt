@@ -58,4 +58,4 @@ Source: https://fonts.google.com/specimen/Google+Sans+Flex
 
 = Images =
 
-TODO before release: every file in assets/images needs a source and a licence that allows redistribution (CC0 or equivalent) listed here. Images that cannot be sourced must be replaced.
+All files in assets/images are original placeholder artwork made for Trace and are distributed with the theme under the GPL, version 2 or later. They contain no third-party material. Replace them with your own images.

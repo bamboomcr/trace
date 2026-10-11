@@ -23,88 +23,88 @@
 <!-- wp:accordion {"metadata":{"name":"Accordion FAQ — Questions"},"autoclose":true} -->
 <div role="group" class="wp-block-accordion"><!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Do you offer customer support?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">How do we get started?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel {"style":{"spacing":{"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}}}} -->
 <div role="region" class="wp-block-accordion-panel" style="padding-top:var(--wp--preset--spacing--s);padding-bottom:var(--wp--preset--spacing--s)"><!-- wp:paragraph -->
-<p>Of course, I do! I try my best to provide excellent customer service, and we will gladly give you a hand as long as you have an active plan.</p>
+<p>Send a short note about what you need. We reply within two working days with a few questions, then a plan and a fixed quote.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Once you buy a theme or build a site using one of the themes, if you are having any doubts or feel like you need help, you can check out the Help center&nbsp;and browse through the articles. You can also send an email to support@example.com, and we'll get back to you as soon as possible.</p>
+<p>If you would rather talk it through, use the contact page to book a call. There is no charge for a first conversation.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
 
 <!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Your theme. Your site. Your rules.</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">How long does a project take?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel -->
 <div role="region" class="wp-block-accordion-panel"><!-- wp:paragraph -->
-<p>No. Trace is a one-time purchase. You pay once and use it for as long as you like.</p>
+<p>Most projects run four to eight weeks. We agree the timeline before work starts and tell you early if anything changes.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
 
 <!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Can I use Trace on multiple websites?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">What does it cost?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel -->
 <div role="region" class="wp-block-accordion-panel"><!-- wp:paragraph -->
-<p>Yes. Use it on personal projects, client sites, or experiments — there are no artificial limits but we can only support the theme on one installation.</p>
+<p>Every project is quoted up front, so you know the total before we begin. The pricing page lists our usual starting points.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
 
 <!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Do I need a page builder?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Do you work with clients remotely?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel -->
 <div role="region" class="wp-block-accordion-panel"><!-- wp:paragraph -->
-<p>No. Trace is built entirely for the WordPress block editor (Full Site Editing). No extra builders, no lock-in. I don't know for certain but I am sure page builders don't work with block themes.</p>
+<p>Yes. Most of our clients are in other cities or time zones. A shared project board and one short call a week keep things moving.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
 
 <!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Can I customise layouts, spacing, and typography?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Can we make changes along the way?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel -->
 <div role="region" class="wp-block-accordion-panel"><!-- wp:paragraph -->
-<p>Absolutely. Trace gives you control through sensible defaults, global styles, and patterns — without breaking consistency.</p>
+<p>Yes. Each stage ends with a review round. A bigger change of direction is fine too; we re-quote it so there are no surprises.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
 
 <!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Is Trace fast?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Who will we be working with?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel -->
 <div role="region" class="wp-block-accordion-panel"><!-- wp:paragraph -->
-<p>Yes. No frameworks, no builders, no unnecessary scripts. Just clean, modern WordPress.</p>
+<p>The people you meet at the start do the work. Projects are not handed to a different team once the contract is signed.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
 
 <!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">What happens after I buy?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">What happens after launch?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel -->
 <div role="region" class="wp-block-accordion-panel"><!-- wp:paragraph -->
-<p>You download the theme, install it, and build. No accounts, no activations, no expiry dates. You will be invited to activate support on a domain but you do not need to.</p>
+<p>You get everything we made, plus a handover session. Support plans are available if you want us on call, but they are optional.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item --></div>

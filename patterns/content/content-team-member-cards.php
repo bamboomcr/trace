@@ -18,7 +18,7 @@
 
 			<!-- wp:image {"width":"60px","height":"60px","scale":"cover","linkDestination":"none","align":"center","style":{"border":{"radius":{"topLeft":"100px","topRight":"100px","bottomLeft":"100px","bottomRight":"100px"}}}} -->
 			<figure class="wp-block-image aligncenter is-resized has-custom-border">
-				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/team-placeholder.png' ) ); ?>" alt="Team Member" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-avatar.svg' ) ); ?>" alt="" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
 			</figure>
 			<!-- /wp:image -->
 
@@ -50,7 +50,7 @@
 
 			<!-- wp:image {"width":"60px","height":"60px","scale":"cover","linkDestination":"none","align":"center","style":{"border":{"radius":{"topLeft":"100px","topRight":"100px","bottomLeft":"100px","bottomRight":"100px"}}}} -->
 			<figure class="wp-block-image aligncenter is-resized has-custom-border">
-				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/team-placeholder.png' ) ); ?>" alt="Team Member" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-avatar.svg' ) ); ?>" alt="" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
 			</figure>
 			<!-- /wp:image -->
 
@@ -82,7 +82,7 @@
 
 			<!-- wp:image {"width":"60px","height":"60px","scale":"cover","linkDestination":"none","align":"center","style":{"border":{"radius":{"topLeft":"100px","topRight":"100px","bottomLeft":"100px","bottomRight":"100px"}}}} -->
 			<figure class="wp-block-image aligncenter is-resized has-custom-border">
-				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/team-placeholder.png' ) ); ?>" alt="Team Member" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-avatar.svg' ) ); ?>" alt="" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
 			</figure>
 			<!-- /wp:image -->
 
@@ -114,7 +114,7 @@
 
 			<!-- wp:image {"width":"60px","height":"60px","scale":"cover","linkDestination":"none","align":"center","style":{"border":{"radius":{"topLeft":"100px","topRight":"100px","bottomLeft":"100px","bottomRight":"100px"}}}} -->
 			<figure class="wp-block-image aligncenter is-resized has-custom-border">
-				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/team-placeholder.png' ) ); ?>" alt="Team Member" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-avatar.svg' ) ); ?>" alt="" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
 			</figure>
 			<!-- /wp:image -->
 
@@ -146,7 +146,7 @@
 
 			<!-- wp:image {"width":"60px","height":"60px","scale":"cover","linkDestination":"none","align":"center","style":{"border":{"radius":{"topLeft":"100px","topRight":"100px","bottomLeft":"100px","bottomRight":"100px"}}}} -->
 			<figure class="wp-block-image aligncenter is-resized has-custom-border">
-				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/team-placeholder.png' ) ); ?>" alt="Team Member" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/placeholder-avatar.svg' ) ); ?>" alt="" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;object-fit:cover;width:60px;height:60px" />
 			</figure>
 			<!-- /wp:image -->
 

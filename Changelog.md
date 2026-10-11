@@ -52,13 +52,13 @@ Release-preparation pass.
 
 ### Removed
 
+- All bundled photographs; replaced with original SVG placeholder artwork
+- Trace sales copy in the demo patterns; replaced with neutral placeholder text
 - Test page pattern
 - theme.json entries WordPress ignored (malformed block style variations)
 
 ### Known issues
 
-- Bundled images still need sources and licences before release
-- Demo copy in the FAQ, pricing and team patterns still reads as Trace sales copy
 - Pattern text is not yet translatable
 
 

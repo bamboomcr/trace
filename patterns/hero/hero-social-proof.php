@@ -10,7 +10,7 @@
 
 <!-- wp:cover {"metadata":{"name":"Hero — Social Proof"},"overlayColor":"background","isUserOverlayColor":true,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|4xl","bottom":"var:preset|spacing|4xl"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--4-xl);padding-bottom:var(--wp--preset--spacing--4-xl)"><span aria-hidden="true" class="wp-block-cover__background has-background-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<p class="has-text-align-center" style="margin-top:0;margin-bottom:0">Ready-made hero layouts to help you start your page with clarity and intent</p>
+<p class="has-text-align-center" style="margin-top:0;margin-bottom:0">A short supporting line that tells visitors they are in the right place</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center","level":1,"style":{"spacing":{"margin":{"top":"var:preset|spacing|l","bottom":"var:preset|spacing|l"}},"typography":{"lineHeight":"0.9"}},"fontSize":"display-xl"} -->

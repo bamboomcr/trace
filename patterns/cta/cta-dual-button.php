@@ -12,7 +12,7 @@
 	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
 		<!-- wp:heading {"level":1} -->
-		<h1>Trace: a minimal, typography-led theme.</h1>
+		<h1>A studio for clear, considered work.</h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"fontSize":"body-l"} -->
@@ -26,7 +26,7 @@
 			<!-- /wp:button -->
 
 			<!-- wp:button {"className":"is-style-outline"} -->
-			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#about">About Trace</a></div>
+			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#about">About us</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
