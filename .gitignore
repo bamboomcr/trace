@@ -23,3 +23,19 @@ npm-debug.log*
 # Build output
 dist/
 build/
+
+# Old demo photos, restored locally so existing pages on trace.local still
+# show them. Unlicensed for redistribution: never commit or ship these.
+assets/images/70s-model.jpg
+assets/images/decor-furniture-mobile.jpg
+assets/images/hero-default.png
+assets/images/ogo.jpg
+assets/images/right-on-magazine.jpg
+assets/images/team-placeholder.png
+assets/images/testimonial-a.jpg
+assets/images/testimonial-b.jpg
+assets/images/testimonial-c.jpg
+assets/images/testimonial-d.jpg
+assets/images/testimonial-e.jpg
+assets/images/trace-id-cards.jpg
+assets/images/vreality.jpg
