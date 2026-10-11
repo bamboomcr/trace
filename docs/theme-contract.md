@@ -162,9 +162,14 @@ Default heading sizes wired in `theme.json`:
 
 | Slug       | Value |
 |------------|-------|
-| `display`  | `1`   |
-| `headings` | `1.2` |
-| `body`     | `1.6` |
+| `display`  | `1`    |
+| `headings` | `1.28` |
+| `body`     | `1.25` |
+
+These match what the fonts rendered at before the tokens were wired up
+(the old `--wp--preset--line-height--*` variables never existed, so every
+page was designed against the fonts' natural line height). Loosening body
+copy for long-form reading is a one-line change to `body`.
 
 Custom line height is disabled in the editor — use these tokens.
 
@@ -179,7 +184,8 @@ Defined under `settings.custom.letterSpacing`, referenced as
 | `slight` | `-0.02em`  |
 | `normal` | `0em`      |
 
-Headings default to `slight`. Buttons default to `normal`.
+Headings and buttons default to `normal`. `tight` and `slight` are opt-in via the
+`.is-display-*` / `.is-heading-*` / `.is-tracking-*` utility classes.
 
 ## 5. Colour System
 

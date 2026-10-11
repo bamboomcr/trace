@@ -10,7 +10,7 @@
 				{ "name": "Border",             "slug": "border",             "color": "#DDDDDD" },
 				{ "name": "Muted",              "slug": "muted",              "color": "#6B6B6B" },
 				{ "name": "Foreground",         "slug": "foreground",         "color": "#111111" },
-				{ "name": "Text",               "slug": "text",               "color": "#111111" },
+				{ "name": "Text",               "slug": "body",               "color": "#111111" },
 				{ "name": "Heading",            "slug": "heading",            "color": "#111111" },
 				{ "name": "Background Inverse", "slug": "background-inverse", "color": "#111111" },
 				{ "name": "Action",             "slug": "action",             "color": "#DBFE87" },

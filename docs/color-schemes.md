@@ -28,7 +28,7 @@ across schemes.
 | `border`             | Dividers, outlines, button borders               | Buttons, accordion, dividers                  |
 | `muted`              | Quieter text (captions, dates, footer links)     | Post date, post-terms, footer meta            |
 | `foreground`         | Generic foreground (icons, separators, button fill) | Buttons, decorative CSS                    |
-| `text`               | Body paragraph and link text                     | Wired in `theme.json → styles.color.text` and `styles.elements.link` |
+| `body`               | Body paragraph and link text (shown as "Text" in the picker) | Wired in `theme.json → styles.color.text` and `styles.elements.link` |
 | `heading`            | Heading color for h1–h6                          | Wired in `theme.json → styles.elements.heading` |
 | `background-inverse` | Complement of `background` for inverted sections | Use on Cover/Group blocks for "dark interlude" sections, regardless of active scheme |
 | `action`             | Primary brand accent / CTA fill                  | Button hover/fill, focus rings                |
@@ -36,13 +36,21 @@ across schemes.
 | `danger`             | Error / destructive state                        | Form errors, delete confirmations              |
 | `highlight`          | Callouts, annotations, marks                     | Quote treatments, mark elements                |
 
-### Why `text` and `foreground` are separate
+### Why `body` and `foreground` are separate
 
 They usually share a value, but label different intents in the editor's
-color picker. With `text` wired to body and links, paragraphs are labelled
+color picker. With `body` wired to body and links, paragraphs are labelled
 "Text" and headings "Heading", and `foreground` is left as the generic
 decoration token (button fills, icons, separators). Give them the same hex
 unless you want body copy in a different tone from UI elements.
+
+The slug is `body`, not `text`, on purpose. WordPress generates a class
+`has-SLUG-color` for every palette slug, and it also adds its own generic
+`has-text-color` class to any block with a custom text color. A slug called
+`text` produces `.has-text-color { color: … !important }`, which overrides
+every other text color on the site (muted captions, footer labels, inverse
+sections). Never name a slug `text`, `link` or `background`-anything that
+would collide with a core `has-*` class.
 
 ## Existing schemes
 
@@ -65,7 +73,7 @@ A few things to think about that the schema can't enforce:
 - **`background-inverse` should genuinely contrast with `background`.** It's
   designed for "the section breaks out of the scheme" use cases. If they're
   similar values, it does nothing.
-- **`heading`, `text` and `foreground` can be the same.** Common; nothing wrong with
+- **`heading`, `body` and `foreground` can be the same.** Common; nothing wrong with
   it. Set them differently when you want headings in a slightly bolder hue
   (e.g. near-black headings on a soft-gray body). Citron is an example where
   they differ: body is near-black, headings are teal.
@@ -73,9 +81,9 @@ A few things to think about that the schema can't enforce:
   required to be consistent across schemes.** A "Rust" scheme can have a
   burnt-orange `action` even though the dark scheme uses lime. The schema
   fixes the *role*, not the value.
-- **Test contrast.** A scheme is only good if `text` on `background`
+- **Test contrast.** A scheme is only good if `body` on `background`
   passes WCAG AA (4.5:1 for body text). Same for `heading` on `background`,
-  and any time you put `text` on `surface`.
+  and any time you put `body` on `surface`.
 
 ## What NOT to do
 

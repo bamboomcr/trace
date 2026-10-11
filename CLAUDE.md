@@ -73,7 +73,7 @@ free per scheme — designers choose freely.
 | `border`             | Dividers, outlines, button borders                            |
 | `muted`              | Captions, dates, footer meta                                  |
 | `foreground`         | Generic foreground (icons, separators, button text) — ~30 CSS refs |
-| `text`               | Body paragraph text — wired in `theme.json → styles.color.text` |
+| `body`               | Body paragraph text (picker label "Text") — wired in `theme.json → styles.color.text` |
 | `heading`            | h1–h6 — wired in `theme.json → styles.elements.heading`       |
 | `background-inverse` | For "dark interlude" sections that break out of the scheme    |
 | `action`             | Primary brand accent / CTA fill                               |
@@ -81,15 +81,22 @@ free per scheme — designers choose freely.
 | `danger`             | Error / destructive state                                     |
 | `highlight`          | Callouts, annotations, marks                                  |
 
-### Why text and foreground are separate
+### Why body and foreground are separate
 
 Two slugs that almost always share a value, but label different intents in
-the editor's color picker. Without `text`, body paragraphs are picker-labeled
+the editor's color picker. Without `body`, body paragraphs are picker-labeled
 "Foreground" because the picker reverse-resolves the computed color. With
-`text` wired to body and links, paragraphs label correctly as "Text",
+`body` wired to body and links, paragraphs label correctly as "Text",
 headings as "Heading", and `foreground` becomes the generic decoration token.
 
 ### Hard rules
+
+- **Never name a slug `text`.** WordPress emits `.has-SLUG-color` for each
+  slug and also adds a generic `has-text-color` class to every block with a
+  custom text color. A `text` slug therefore generates
+  `.has-text-color { color: … !important }` and flattens every muted or
+  inverse text color on the site. This shipped once (May 2026) and is why
+  the slug is called `body`.
 
 - **Don't rename slugs.** Renaming breaks every saved customization and every
   reference across patterns/CSS. New slugs are fine; renames are a major
@@ -247,7 +254,7 @@ If you genuinely need to add a slug:
    value).
 3. Add to `docs/_color-scheme-template.json`.
 4. Wire to relevant elements in `theme.json` `styles.color.*` /
-   `styles.elements.*` if it's a semantic role like `text` or `heading`.
+   `styles.elements.*` if it's a semantic role like `body` or `heading`.
 5. Update `docs/color-schemes.md` (slug count + role table).
 6. Update this file's Color System section.
 7. Commit before testing — schema changes can break customizations.
@@ -264,7 +271,7 @@ reference and check it's in the schema:
 ```python
 import re, glob
 EXPECTED = {'background', 'surface', 'border', 'muted', 'foreground',
-            'text', 'heading', 'background-inverse', 'action', 'accent-2',
+            'body', 'heading', 'background-inverse', 'action', 'accent-2',
             'danger', 'highlight'}
 all_refs = set()
 for f in glob.glob('**/*', recursive=True):
