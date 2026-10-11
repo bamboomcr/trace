@@ -41,6 +41,17 @@
 	z-index: 99999;
 }
 
+/* Templates with no hero: clear the overlaid header. Pages and the Blank
+   template are left alone so a hero can sit underneath it. */
+body:has(.site-header.is-smart, .site-header.is-fixed) .trace-header-offset {
+	padding-top: clamp(6rem, 4.5rem + 6vw, 10rem);
+}
+
+.trace-post-meta,
+.trace-post-nav {
+	gap: var(--wp--preset--spacing--m);
+}
+
 /*  =========================================================================
 	TRACE: Make fixed header work even with wp-block-template-part wrapper
     ====================================================================== */
