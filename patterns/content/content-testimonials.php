@@ -46,7 +46,7 @@
 						<!-- /wp:spacer -->
 
 						<!-- wp:paragraph {"align":"left","fontSize":"heading-m"} -->
-						<p class="has-text-align-left has-heading-m-font-size">Trace felt like incredible value from the start. I use it for my blog and portfolio, and the clean design suits my style perfectly. Solo Themes have a simplicity that really helps my work stand out.</p>
+						<p class="has-text-align-left has-heading-m-font-size">Trace felt like incredible value from the start. I use it for my blog and portfolio, and the clean design suits my style perfectly. The layouts have a simplicity that really helps my work stand out.</p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph -->

@@ -1,5 +1,5 @@
 === Trace ===
-Contributors: Solo Themes
+Contributors: SoloDev
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
@@ -39,7 +39,7 @@ See Changelog.md.
 
 == Copyright ==
 
-Trace WordPress Theme, (C) 2025-2026 Solo Themes.
+Trace WordPress Theme, (C) 2025-2026 SoloDev, https://solodev.com.
 Trace is distributed under the terms of the GNU GPL, version 2 or later. See LICENSE.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

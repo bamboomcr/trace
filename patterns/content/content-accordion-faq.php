@@ -23,7 +23,7 @@
 <!-- wp:accordion {"metadata":{"name":"Accordion FAQ — Questions"},"autoclose":true} -->
 <div role="group" class="wp-block-accordion"><!-- wp:accordion-item -->
 <div class="wp-block-accordion-item"><!-- wp:accordion-heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"2xl"} -->
-<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Do Solo Themes offer customer support?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
+<h3 class="wp-block-accordion-heading has-2-xl-font-size" style="font-style:normal;font-weight:400"><button class="wp-block-accordion-heading__toggle"><span class="wp-block-accordion-heading__toggle-title">Do you offer customer support?</span><span class="wp-block-accordion-heading__toggle-icon" aria-hidden="true">+</span></button></h3>
 <!-- /wp:accordion-heading -->
 
 <!-- wp:accordion-panel {"style":{"spacing":{"padding":{"top":"var:preset|spacing|s","bottom":"var:preset|spacing|s"}}}} -->
@@ -32,7 +32,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Once you buy a theme or build a site using one of the themes, if you are having any doubts or feel like you need help, you can check out the Help center&nbsp;and browse through the articles. You can also send an email to support@solothemes.com, and we'll get back to you as soon as possible.</p>
+<p>Once you buy a theme or build a site using one of the themes, if you are having any doubts or feel like you need help, you can check out the Help center&nbsp;and browse through the articles. You can also send an email to support@example.com, and we'll get back to you as soon as possible.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:accordion-panel --></div>
 <!-- /wp:accordion-item -->
